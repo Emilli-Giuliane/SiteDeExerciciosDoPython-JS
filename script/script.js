@@ -86,7 +86,7 @@ console.log(window.location.pathname)
 if (window.location.pathname === "/pagMain.html") {
     document.querySelector("aside").innerHTML = `
     <ul>
-        <li><a href="Atividades resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
+        <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li>Estrutura de decisão</li>
         <li>Estrutura de repetição</li>
         <li>Exercícios sobre listas</li>
@@ -97,7 +97,7 @@ if (window.location.pathname === "/pagMain.html") {
         <li>Lista de projetos</li>
         <li>Lista de dados</li>
     </ul>`
-} else if (window.location.pathname === "/Atividades%20resolvidas/EstruturaSequencial.html") {
+} else if (window.location.pathname === "/Atividades_resolvidas/EstruturaSequencial.html") {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="./EstruturaSequencial.html">Estrutura sequencial</a></li>
