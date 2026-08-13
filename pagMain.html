@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página principal</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="icon" href="style/img/python.png" type="image/x-icon">
+        <!-- Google Symbols -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="leftSideNav">
+                    <a href="pagMain.html"><img src="style/img/python.png"></a>
+                    <h1>Lista de Exercícios</h1>
+                </div>
+                
+                <button class="theme">
+                    <!-- nav button -->
+                        <span class="material-symbols-outlined" id="sun">
+                            wb_sunny
+                        </span>
+                    
+                        <span class="material-symbols-outlined" id="moon">
+                            mode_night
+                        </span>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- div lateral -->
+            <div class="leftSideBody">
+                <h4>Lista de Exercícios</h4>
+                <aside>
+                    <!-- Lista inserida automaticamente pelo js -->
+                </aside>
+            </div>
+            
+            <section>
+                <h1>Lista de exercícios</h1>
+                <p>Esta é uma lista com sugestões de programas para iniciantes em programação. Os exercícios podem ser implementados em pseudo-código, Python, C, C++, Java, Pascal ou em qualquer outra linguagem. Eu escolhi JavaScript. Os exercícios estão divididos em categorias e procuram obedecer uma ordem de dificuldade crescente. Cada exercício é independente do outro, sendo possível deixar exercícios para trás sem grandes prejuízos.</p>
+
+                <h2>Notas do autor do repositório</h2>
+                <p>
+                    Fiz um site inspirado no site do Python Brasil. Nesse site contém vários desafios com pergunta e resposta, todos separados em categorias e ordem númerica. A dificuldade vai aumentando conforme atividades se passam. Este é um projeto meio grande então pode demorar bastante até ser finalizado.
+                </p>
+                
+                <h4>Listas de exercícios:</h4>
+                <ol>
+                    <li><a href="Atividades resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
+                    <li>Estrutura de decisão</li>
+                    <li>Estrutura de repetição</li>
+                    <li>Exercícios sobre listas</li>
+                    <li>Exercícios sobre funções</li>
+                    <li>Exercícios sobre strings</li>
+                    <li>Exercícios sobre manipulação de arquivos</li>
+                    <li>Exercícios sobre classes</li>
+                    <li>Lista de projetos</li>
+                    <li>Lista de dados</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            
+        </footer>
+        <script src="script/script.js"></script>
+
+            <!-- scrappted<script>
+    // se estou na pag tal caminho = "../Atividades resolvidas/..."
+    let sumario = [
+        {topico: "Estrutura sequencial",caminho:""},
+        {topico: "Estrutura de decisão",caminho:""},
+        {topico: "Estrutura de repetição",caminho:""}
+    ]
+
+    const nomePag = window.location.pathname;
+    
+    const limparNomeCaminho = {
+        limpar() {
+                x = 0
+                sumario.forEach(topico => {
+                    let nomeLimpo = (sumario[x].topico)
+                        .split(' ')
+                        .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+                        .join(' ');
+                    let nomeLimpoJunto = nomeLimpo.replace(/\s/g, '');
+                    console.log(nomeLimpoJunto)
+                    x++
+                });
+        }
+    }
+
+
+if (nomePag === "/pagMain.html") {
+    sumario[x].caminho = limparNomeCaminho.limpar()
+    // x = 0
+    // sumario.forEach(topico => {
+        //     let nomeLimpo = (sumario[x].topico)
+        //         .split(' ')
+        //         .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+        //         .join(' ');
+        //         let nomeLimpoJunto = nomeLimpo.replace(/\s/g, '');
+        //         console.log(nomeLimpoJunto)
+        //     sumario[x].caminho = "Atividades resolvidas/"+nomeLimpoJunto+".html"
+        //     x++
+        // });
+    } else if (nomePag === "/Atividades%20resolvidas/EstruturaSequencial.html"){
+        
+    }
+
+    console.log(sumario)
+    console.log(nomePag)
+    
+</script> -->
+    </body>
+</html>
