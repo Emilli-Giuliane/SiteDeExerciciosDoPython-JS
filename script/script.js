@@ -82,8 +82,9 @@ document.querySelector(".theme").addEventListener('click', () => {
     }
 });
 
-console.log(window.location.pathname)
-if (window.location.pathname === "/pagMain.html") {
+const path = window.location.pathname;
+console.log(path)
+if (path.endsWith("/pagMain.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
@@ -97,7 +98,7 @@ if (window.location.pathname === "/pagMain.html") {
         <li>Lista de projetos</li>
         <li>Lista de dados</li>
     </ul>`
-} else if (window.location.pathname === "/Atividades_resolvidas/EstruturaSequencial.html") {
+} else if (path.endsWith("/Atividades_resolvidas/EstruturaSequencial.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="./EstruturaSequencial.html">Estrutura sequencial</a></li>
