@@ -100,7 +100,7 @@ if (window.location.pathname === "/pagMain.html") {
 } else if (window.location.pathname === "/Atividades%20resolvidas/EstruturaSequencial.html") {
     document.querySelector("aside").innerHTML = `
     <ul>
-        <li><a href="EstruturaSequencial.html">Estrutura sequencial</a></li>
+        <li><a href="./EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li>Estrutura de decisão</li>
         <li>Estrutura de repetição</li>
         <li>Exercícios sobre listas</li>
