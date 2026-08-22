@@ -57,7 +57,11 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+            <pre>
+let numero = prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa: ");
+console.log(`O número informado foi "${numero}"`)
+
+            </pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,19 +79,13 @@
 
     <script>
         // resolução da questão em JavaScript
+        let numero = prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa: ");
+        
         function log(msg) {
             document.getElementById("console").textContent += msg + "\n";
         }
-        let numero = prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa: ");
-        let mostrar = console.log (`O número informado foi "${numero}"`) //Sem o \"${numero}\" pois isso não funciona aqui ao mostrar a variável
-        /*
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
-       log(mostrar)
+        
+        log(`O número informado foi "${numero}"`)//Sem o \"${numero}\" pois isso não funciona aqui ao mostrar a variável
     </script>
 </body>
 </html>
