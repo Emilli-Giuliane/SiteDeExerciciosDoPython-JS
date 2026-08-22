@@ -41,9 +41,10 @@
         
         <section>
             <h1>Estrutura sequencial</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 02</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                 Faça um programa que peça um número e então mostre a mensagem <span class="codeText">"O número informado foi [número]":</span>
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -74,6 +75,11 @@
 
     <script>
         // resolução da questão em JavaScript
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        }
+        let numero = prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa: ");
+        let mostrar = console.log (`O número informado foi "${numero}"`) //Sem o \"${numero}\" pois isso não funciona aqui ao mostrar a variável
         /*
         *function log(msg) {
         *    document.getElementById("console").textContent += msg + "\n";
@@ -81,6 +87,7 @@
         *console.log("Hello, world!")
         *log("Hello, world!")
         */
+       log(mostrar)
     </script>
 </body>
 </html>

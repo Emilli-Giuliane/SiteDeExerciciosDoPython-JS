@@ -84,7 +84,7 @@ document.querySelector(".theme").addEventListener('click', () => {
 
 const path = window.location.pathname;
 console.log(path)
-if (path.endsWith("/pagMain.html")) {
+if (path.endsWith("/index.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>

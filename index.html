@@ -68,53 +68,5 @@
             
         </footer>
         <script src="script/script.js"></script>
-
-            <!-- scrappted<script>
-    // se estou na pag tal caminho = "../Atividades resolvidas/..."
-    let sumario = [
-        {topico: "Estrutura sequencial",caminho:""},
-        {topico: "Estrutura de decisão",caminho:""},
-        {topico: "Estrutura de repetição",caminho:""}
-    ]
-
-    const nomePag = window.location.pathname;
-    
-    const limparNomeCaminho = {
-        limpar() {
-                x = 0
-                sumario.forEach(topico => {
-                    let nomeLimpo = (sumario[x].topico)
-                        .split(' ')
-                        .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
-                        .join(' ');
-                    let nomeLimpoJunto = nomeLimpo.replace(/\s/g, '');
-                    console.log(nomeLimpoJunto)
-                    x++
-                });
-        }
-    }
-
-
-if (nomePag === "/pagMain.html") {
-    sumario[x].caminho = limparNomeCaminho.limpar()
-    // x = 0
-    // sumario.forEach(topico => {
-        //     let nomeLimpo = (sumario[x].topico)
-        //         .split(' ')
-        //         .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
-        //         .join(' ');
-        //         let nomeLimpoJunto = nomeLimpo.replace(/\s/g, '');
-        //         console.log(nomeLimpoJunto)
-        //     sumario[x].caminho = "Atividades resolvidas/"+nomeLimpoJunto+".html"
-        //     x++
-        // });
-    } else if (nomePag === "/Atividades%20resolvidas/EstruturaSequencial.html"){
-        
-    }
-
-    console.log(sumario)
-    console.log(nomePag)
-    
-</script> -->
     </body>
 </html>
