@@ -133,6 +133,22 @@ main>section {
     height: 100%;
 }
 
+/* Para identar <ul>s nas atividades */
+.identarLista{
+    padding-left:50px;
+}
+
+/* Para blockquote em geral */
+blockquote {
+    border-left:5px solid gray;
+    width: 40%;
+}
+
+blockquote>p{
+    padding-left: 8px;
+    color: gray;
+    background-color: rgba(105, 105, 105, 0.243);
+}
 
 ol {
     margin:10px;
@@ -151,6 +167,12 @@ ol {
 .codeText {
     color: var(--codeText);
     background-color: var(--codeBackground);
+}
+
+.exempleCode {
+    color:var(--codeBackgroundL);
+    background-color:var(--hColorL);
+    padding:4px;
 }
 
 pre {
