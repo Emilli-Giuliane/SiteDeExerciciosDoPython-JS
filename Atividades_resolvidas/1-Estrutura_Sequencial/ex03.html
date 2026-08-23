@@ -58,7 +58,17 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+        <pre>
+function somar(a,b){
+    return a+b;
+}
+
+let num1 = parseInt(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa. Ele será somado com o próximo número:"))
+let num2 = parseInt(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa. Ele será somado com o número anterior:"))
+
+let saidaConsole = `A soma de "${num1}" e "${num2}" é equivalente a: `+somar(num1,num2);
+console.log(saidaConsole)
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -76,13 +86,21 @@
 
     <script>
         // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        }
+
+        function somar(a,b){
+            return a+b;
+        }
+        
+        let num1 = parseInt(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa. Ele será somado com o próximo número:"))
+        let num2 = parseInt(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa. Ele será somado com o número anterior:"))
+        
+        let saidaConsole = `A soma de "${num1}" e "${num2}" é equivalente a: `+somar(num1,num2);
+        console.log(saidaConsole)
+
+        log(saidaConsole)
     </script>
 </body>
 </html>

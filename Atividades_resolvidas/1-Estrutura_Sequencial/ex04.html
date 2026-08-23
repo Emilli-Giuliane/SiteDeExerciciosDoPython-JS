@@ -58,7 +58,19 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+        <pre>
+function calcularMedia(nota1,nota2,nota3,nota4){
+    return (nota1 + nota2 + nota3 + nota4)/4;
+}
+
+let n1 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+let n2 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+let n3 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+let n4 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+
+let saidaConsole = "A média usando todas as notas é: "+calcularMedia(n1,n2,n3,n4);
+console.log(saidaConsole)
+        </pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -76,13 +88,23 @@
 
     <script>
         // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        function calcularMedia(nota1,nota2,nota3,nota4){
+            return (nota1 + nota2 + nota3 + nota4)/4;
+        }
+       
+        let n1 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+        let n2 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+        let n3 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+        let n4 = parseFloat(prompt("Para mostrar essa atividade, preciso que digite um número nesta caixa.\nO número digitado será usado para fazer a média com os números pedidos:"))
+
+        let saidaConsole = "A média usando todas as notas é: "+calcularMedia(n1,n2,n3,n4);
+        console.log(saidaConsole)
+
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        }
+        
+        log(saidaConsole)
     </script>
 </body>
 </html>
