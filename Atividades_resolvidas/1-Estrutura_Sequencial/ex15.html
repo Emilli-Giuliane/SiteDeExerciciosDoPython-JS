@@ -78,7 +78,31 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let ganhaHoras = prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:");
+ganhaHoras = parseFloat(ganhaHoras.replace(",","."));
+let horasTrabalhadas = parseInt(prompt("Digite a quantidade de horas trabalhadas no mês:"));
+
+// Calcular total do salário ao mês
+let calcTotalSalMês = ganhaHoras * horasTrabalhadas;
+calcTotalSalMês = parseFloat(calcTotalSalMês.toFixed(2));
+
+// sabendo-se que são descontados 11% para o Imposto de Renda
+let comImposto = 0.11 * calcTotalSalMês;
+comImposto = parseFloat(comImposto.toFixed(2));
+// 8% para o INSS
+let comINSS = 0.08 * calcTotalSalMês;
+comINSS = parseFloat(comINSS.toFixed(2));
+// 5% para o sindicato
+let comSindicato = 0.05 * calcTotalSalMês;
+comSindicato = parseFloat(comSindicato.toFixed(2));
+
+let salarioLiquido = parseFloat((calcTotalSalMês - (comImposto + comINSS + comSindicato)).toFixed(2));
+// salarioLiquido = parseFloat(salarioLiquido.toFixed(2));        
+
+let saidaConsole = `Salário bruto: R$${calcTotalSalMês}.\nQuanto pagou ao INSS: R$${comINSS}.\nQuanto pagou ao sindicato: R$${comSindicato}\nO salário líquido: R$${salarioLiquido}.`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -95,14 +119,34 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let ganhaHoras = prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:");
+        ganhaHoras = parseFloat(ganhaHoras.replace(",","."));
+        let horasTrabalhadas = parseInt(prompt("Digite a quantidade de horas trabalhadas no mês:"));
+
+        // Calcular total do salário ao mês
+        let calcTotalSalMês = ganhaHoras * horasTrabalhadas;
+        calcTotalSalMês = parseFloat(calcTotalSalMês.toFixed(2));
+
+        // sabendo-se que são descontados 11% para o Imposto de Renda
+        let comImposto = 0.11 * calcTotalSalMês;
+        comImposto = parseFloat(comImposto.toFixed(2));
+        // 8% para o INSS
+        let comINSS = 0.08 * calcTotalSalMês;
+        comINSS = parseFloat(comINSS.toFixed(2));
+        // 5% para o sindicato
+        let comSindicato = 0.05 * calcTotalSalMês;
+        comSindicato = parseFloat(comSindicato.toFixed(2));
+
+        let salarioLiquido = parseFloat((calcTotalSalMês - (comImposto + comINSS + comSindicato)).toFixed(2));
+        // salarioLiquido = parseFloat(salarioLiquido.toFixed(2));        
+        
+        let saidaConsole = `Salário bruto: R$${calcTotalSalMês}.\nQuanto pagou ao INSS: R$${comINSS}.\nQuanto pagou ao sindicato: R$${comSindicato}\nO salário líquido: R$${salarioLiquido}.`;
+        console.log(saidaConsole);
+        
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        }
+        log(saidaConsole);
     </script>
 </body>
 </html>

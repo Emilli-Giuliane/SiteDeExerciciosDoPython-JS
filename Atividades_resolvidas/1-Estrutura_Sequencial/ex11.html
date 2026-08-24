@@ -65,7 +65,31 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+// Faça um programa que peça 2 números inteiros e um número real.
+alert("Para que eu possa mostrar essa atividade, por favor siga os comandos a seguir. Esta atividade calculará 2 numeros inteiros e um número real.");
+let num1 = parseInt(prompt("Digite um número inteiro"));
+let num2 = parseInt(prompt("Digite mais um número inteiro"));
+let numReal = prompt("Digite um número real");
+// Sabendo que existe a possibilidade da pessoa usar vírgula no lugar de ponto, usei o replace para que mude a vírgula para ponto
+numReal = parseFloat(numReal.replace(",","."));
+
+/* Calcule e mostre:
+*   O produto do dobro do primeiro com metade do segundo.
+*/
+let primeiraPergunta = (num1 * 2) * (num2 / 2);
+
+// A soma do triplo do primeiro com o terceiro.
+let segundaPergunta = (num1 * 3) + numReal;
+
+// O terceiro elevado ao cubo.
+let terceiraPergunta = numReal ** 3;
+
+let saidaConsole = `O produto do dobro do primeiro com metade do segundo: ${primeiraPergunta}\nA soma do triplo do primeiro com o terceiro: ${segundaPergunta}\nO terceiro elevado ao cubo: ${terceiraPergunta}`;
+
+console.log(saidaConsole);
+
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -82,14 +106,33 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
+        // Faça um programa que peça 2 números inteiros e um número real.
+        alert("Para que eu possa mostrar essa atividade, por favor siga os comandos a seguir. Esta atividade calculará 2 numeros inteiros e um número real.");
+        let num1 = parseInt(prompt("Digite um número inteiro"));
+        let num2 = parseInt(prompt("Digite mais um número inteiro"));
+        let numReal = prompt("Digite um número real");
+        // Sabendo que existe a possibilidade da pessoa usar vírgula no lugar de ponto, usei o replace para que mude a vírgula para ponto
+        numReal = parseFloat(numReal.replace(",","."));
+        
+        /* Calcule e mostre:
+        *   O produto do dobro do primeiro com metade do segundo.
         */
+        let primeiraPergunta = (num1 * 2) * (num2 / 2);
+
+        // A soma do triplo do primeiro com o terceiro.
+        let segundaPergunta = (num1 * 3) + numReal;
+
+        // O terceiro elevado ao cubo.
+        let terceiraPergunta = numReal ** 3;
+
+        let saidaConsole = `O produto do dobro do primeiro com metade do segundo: ${primeiraPergunta}\nA soma do triplo do primeiro com o terceiro: ${segundaPergunta}\nO terceiro elevado ao cubo: ${terceiraPergunta}`;
+        
+        console.log(saidaConsole);
+
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        }
+        log(saidaConsole);
     </script>
 </body>
 </html>

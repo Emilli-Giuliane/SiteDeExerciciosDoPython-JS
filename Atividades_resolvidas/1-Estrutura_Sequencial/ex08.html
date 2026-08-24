@@ -59,8 +59,9 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
-let ganhaHoras = parseFloat(prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:"))
-let horasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas trabalhadas no mês:"))
+let ganhaHoras = prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:");
+ganhaHoras = parseFloat(ganhaHoras.replace(",","."));
+let horasTrabalhadas = parseInt(prompt("Digite a quantidade de horas trabalhadas no mês:"));
 
 // Calcular total do salário ao mês
 let calcTotalSalMês = ganhaHoras * horasTrabalhadas;
@@ -84,11 +85,13 @@ console.log(saidaConsole);
     <script src="../../script/script.js"></script>
 
     <script>
-        let ganhaHoras = parseFloat(prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:"))
-        let horasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas trabalhadas no mês:"))
+        let ganhaHoras = prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:");
+        ganhaHoras = parseFloat(ganhaHoras.replace(",","."));
+        let horasTrabalhadas = parseInt(prompt("Digite a quantidade de horas trabalhadas no mês:"));
 
         // Calcular total do salário ao mês
         let calcTotalSalMês = ganhaHoras * horasTrabalhadas;
+        calcTotalSalMês = calcTotalSalMês.toFixed(2);
         
         let saidaConsole = "O total do seu salário esse mês é de: " + calcTotalSalMês;
         console.log(saidaConsole);

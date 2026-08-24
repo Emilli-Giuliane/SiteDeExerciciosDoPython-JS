@@ -55,10 +55,35 @@
                 <button id="R">
                     Saída do console
                 </button>
+                <button id="runProgram">
+                    Clique para fazer o programa rodar
+                </button>
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+const runProgram = document.getElementById("runProgram");
+runProgram.addEventListener('click', () => {
+    
+    // faça um programa que leia a variável peso (peso de peixes)[...]
+    let peso = parseFloat(prompt("Informe o peso do peixe: "));
+    // [...] e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite [...]
+    let excesso = peso - 50;
+    // [...] e na variável multa o valor da multa que João deverá pagar. 
+    let multa = excesso * 4;
+    
+    // Imprima os dados do programa com as mensagens adequadas.
+    let saidaConsole = `Peso informado: ${peso}kg.\nValor do excesso: ${excesso}kg\nValor da multa a ser paga: R$${multa}`;
+    console.log(saidaConsole);
+    
+    function log(msg) {
+        let con = document.getElementById("console");
+        con.innerHTML = "";
+        con.innerHTML += msg + "\n";
+    };
+    log(saidaConsole);
+})
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,14 +100,27 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        const runProgram = document.getElementById("runProgram");
+        runProgram.addEventListener('click', () => {
+            
+            // faça um programa que leia a variável peso (peso de peixes)[...]
+            let peso = parseFloat(prompt("Informe o peso do peixe: "));
+            // [...] e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite [...]
+            let excesso = peso - 50;
+            // [...] e na variável multa o valor da multa que João deverá pagar. 
+            let multa = excesso * 4;
+            
+            // Imprima os dados do programa com as mensagens adequadas.
+            let saidaConsole = `Peso informado: ${peso}kg.\nValor do excesso: ${excesso}kg\nValor da multa a ser paga: R$${multa}`;
+            console.log(saidaConsole);
+            
+            function log(msg) {
+                let con = document.getElementById("console");
+                con.innerHTML = "";
+                con.innerHTML += msg + "\n";
+            };
+            log(saidaConsole);
+        })
     </script>
 </body>
 </html>
