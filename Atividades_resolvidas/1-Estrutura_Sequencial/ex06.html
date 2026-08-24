@@ -58,7 +58,14 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let raio = prompt("Para mostrar essa atividade, preciso que digite nesta caixa um valor do RAIO de um círculo.\nO número digitado será calculado para MOSTRAR o valor da ÁREA:");
+
+let area = 3.14 * raio ** 2;
+
+let saidaConsole = `O valor da área de uma circunferência cujo o raio é ${raio}, é igual a ${area}`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,14 +82,17 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let raio = prompt("Para mostrar essa atividade, preciso que digite nesta caixa um valor do RAIO de um círculo.\nO número digitado será calculado para MOSTRAR o valor da ÁREA:");
+
+        let area = 3.14 * raio ** 2;
+
+        let saidaConsole = `O valor da área de uma circunferência cujo o raio é ${raio}, é igual a ${area}`;
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+
+        log(saidaConsole);
     </script>
 </body>
 </html>

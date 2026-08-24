@@ -58,7 +58,13 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let n1 = parseInt(prompt("Para mostrar essa atividade, preciso que digite um valor em METROS nesta caixa.\nO número digitado será usado para fazer a CONVERSÃO de METROS para CENTÍMETROS:"))
+        
+let resultado = n1 * 100;
+let mostrarConsole = `A conversão de "${n1}" metros para centimetros é: ${resultado}cm`;
+console.log(mostrarConsole)
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,14 +81,16 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let n1 = parseInt(prompt("Para mostrar essa atividade, preciso que digite um valor em METROS nesta caixa.\nO número digitado será usado para fazer a CONVERSÃO de METROS para CENTÍMETROS:"))
+        
+        let resultado = n1 * 100;
+        let mostrarConsole = `A conversão de "${n1}" metros para centimetros é: ${resultado}cm`;
+        console.log(mostrarConsole)
+
+        function log(msg){
+            document.getElementById("console").innerText += msg + "\n";
+        };
+        log(mostrarConsole);
     </script>
 </body>
 </html>

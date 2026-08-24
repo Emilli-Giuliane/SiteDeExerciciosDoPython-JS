@@ -58,7 +58,15 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let ladoQuadrado = prompt("Para mostrar essa atividade, preciso que digite nesta caixa o tamanho de um dos lados de um quadrado.\nO número digitado será usado para calcular a ÁREA DO QUADRADO:");
+
+let area = ladoQuadrado ** 2;
+let dobroArea = area * 2;
+
+let saidaConsole = `O lado é "${ladoQuadrado}".\nA área é igual a: ${area}.\nO dobro da área é igual a: ${dobroArea}`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,14 +83,18 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let ladoQuadrado = prompt("Para mostrar essa atividade, preciso que digite nesta caixa o tamanho de um dos lados de um quadrado.\nO número digitado será usado para calcular a ÁREA DO QUADRADO:");
+        
+        let area = ladoQuadrado ** 2;
+        let dobroArea = area * 2;
+
+        let saidaConsole = `O lado é "${ladoQuadrado}".\nA área é igual a: ${area}.\nO dobro da área é igual a: ${dobroArea}`;
+        console.log(saidaConsole);
+
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        }
+        log(saidaConsole);
     </script>
 </body>
 </html>

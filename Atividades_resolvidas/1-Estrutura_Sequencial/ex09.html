@@ -63,7 +63,13 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let F = parseFloat(prompt("Para prosseguir e ver essa atividade, por favor siga as seguintes instruções.\nInforme uma temperatura em Fahrenheit: "));
+
+let C = 5 * ((F-32) / 9);
+let saidaConsole = "Convertendo " + F + " Fahrenheit para Celsius é igual a: " + C;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -80,14 +86,16 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let F = parseFloat(prompt("Para prosseguir e ver essa atividade, por favor siga as seguintes instruções.\nInforme uma temperatura em Fahrenheit para ser convertida em Celsius: "));
+
+        let C = 5 * ((F-32) / 9);
+        let saidaConsole = "Convertendo " + F + " Fahrenheit para Celsius é igual a: " + C;
+        console.log(saidaConsole);
+        
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        }
+        log(saidaConsole);
     </script>
 </body>
 </html>

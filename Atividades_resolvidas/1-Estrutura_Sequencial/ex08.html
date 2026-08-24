@@ -58,7 +58,16 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let ganhaHoras = parseFloat(prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:"))
+let horasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas trabalhadas no mês:"))
+
+// Calcular total do salário ao mês
+let calcTotalSalMês = ganhaHoras * horasTrabalhadas;
+
+let saidaConsole = "O total do seu salário esse mês é de: " + calcTotalSalMês;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,14 +84,19 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let ganhaHoras = parseFloat(prompt("Para mostrar a atividade a seguir, siga as instruções.\nDigite o quando você ganha por horas trabalhadas:"))
+        let horasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas trabalhadas no mês:"))
+
+        // Calcular total do salário ao mês
+        let calcTotalSalMês = ganhaHoras * horasTrabalhadas;
+        
+        let saidaConsole = "O total do seu salário esse mês é de: " + calcTotalSalMês;
+        console.log(saidaConsole);
+        
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        }
+        log(saidaConsole);
     </script>
 </body>
 </html>
