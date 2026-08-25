@@ -46,7 +46,10 @@
             <p>
                 <!-- cole aqui o comando da atividade -->
                 Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
-            </p>
+            </p> 
+            <!-- 54m²(uma lata inteira de 18litros) = R$80 
+            54 / Metros a serem pintados = quantidade de latas a serem compradas (pois 54+54=108)
+            80 * quantidade de latas a serem compradas -->
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
                 <button id="C">
@@ -55,10 +58,33 @@
                 <button id="R">
                     Saída do console
                 </button>
+                <button id="runCode">
+                    Rode o código
+                </button>
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let runCode = document.getElementById("runCode");
+runCode.addEventListener('click', () => {
+    let metrosQuad = parseFloat(prompt("Informe o tamanho da área em metros quadrados a ser pintada. O programa mostrará a quantidade de latas de tinta a serem compradas e o preço total a ser pago."));
+
+    let lataPintaMetros = 54;
+    let lataCusta = 80.00;
+    
+    // Descobrir a quantidade de latas a serem compradas
+    let quantidadeLatasComprar = Math.ceil(metrosQuad / lataPintaMetros);
+    let valor = lataCusta * quantidadeLatasComprar;
+
+    let saidaConsole = `A quantidade de latas a serem compradas é "${quantidadeLatasComprar} latas",\ne o valor total a ser pago é "R$${valor.toLocaleString('pt-br', {minimumFractionDigits: 2})}"`;
+    console.log(saidaConsole);
+
+    function log(msg) {
+        document.getElementById("console").innerHTML = msg;
+    };
+    log(saidaConsole);
+})        
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -75,14 +101,25 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        let runCode = document.getElementById("runCode");
+        runCode.addEventListener('click', () => {
+            let metrosQuad = parseFloat(prompt("Informe o tamanho da área em metros quadrados a ser pintada. O programa mostrará a quantidade de latas de tinta a serem compradas e o preço total a ser pago."));
+
+            let lataPintaMetros = 54;
+            let lataCusta = 80.00;
+            
+            // Descobrir a quantidade de latas a serem compradas
+            let quantidadeLatasComprar = Math.ceil(metrosQuad / lataPintaMetros);
+            let valor = lataCusta * quantidadeLatasComprar;
+
+            let saidaConsole = `A quantidade de latas a serem compradas é "${quantidadeLatasComprar} latas",\ne o valor total a ser pago é "R$${valor.toLocaleString('pt-br', {minimumFractionDigits: 2})}"`;
+            console.log(saidaConsole);
+
+            function log(msg) {
+                document.getElementById("console").innerHTML = msg;
+            };
+            log(saidaConsole);
+        })        
     </script>
 </body>
 </html>

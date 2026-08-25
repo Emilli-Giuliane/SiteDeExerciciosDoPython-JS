@@ -100,7 +100,7 @@ comSindicato = parseFloat(comSindicato.toFixed(2));
 let salarioLiquido = parseFloat((calcTotalSalMês - (comImposto + comINSS + comSindicato)).toFixed(2));
 // salarioLiquido = parseFloat(salarioLiquido.toFixed(2));        
 
-let saidaConsole = `Salário bruto: R$${calcTotalSalMês}.\nQuanto pagou ao INSS: R$${comINSS}.\nQuanto pagou ao sindicato: R$${comSindicato}\nO salário líquido: R$${salarioLiquido}.`;
+let saidaConsole = `Salário bruto: R$${calcTotalSalMês.toLocaleString("pt-br")}.\nQuanto pagou ao INSS: R$${comINSS.toLocaleString("pt-br")}.\nQuanto pagou ao sindicato: R$${comSindicato.toLocaleString("pt-br")}\nO salário líquido: R$${salarioLiquido.toLocaleString("pt-br")}.`;
 console.log(saidaConsole);
 </pre>
             </div>
@@ -140,7 +140,7 @@ console.log(saidaConsole);
         let salarioLiquido = parseFloat((calcTotalSalMês - (comImposto + comINSS + comSindicato)).toFixed(2));
         // salarioLiquido = parseFloat(salarioLiquido.toFixed(2));        
         
-        let saidaConsole = `Salário bruto: R$${calcTotalSalMês}.\nQuanto pagou ao INSS: R$${comINSS}.\nQuanto pagou ao sindicato: R$${comSindicato}\nO salário líquido: R$${salarioLiquido}.`;
+        let saidaConsole = `Salário bruto: R$${calcTotalSalMês.toLocaleString("pt-br")}.\nQuanto pagou ao INSS: R$${comINSS.toLocaleString("pt-br")}.\nQuanto pagou ao sindicato: R$${comSindicato.toLocaleString("pt-br")}\nO salário líquido: R$${salarioLiquido.toLocaleString("pt-br")}.`;
         console.log(saidaConsole);
         
         function log(msg) {

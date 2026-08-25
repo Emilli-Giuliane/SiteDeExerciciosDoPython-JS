@@ -58,7 +58,18 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+alert("Esse programa irá calcular o tempo aproximado até o termino do download de um arquivo. Siga as instruções.");
+// peça o tamanho de um arquivo para download (em MB)
+let download = parseFloat(prompt("Digite o tamanho do seu arquivo para dowload (em MB)"));
+let velLink = parseFloat(prompt("Digite a velocidade do link de internet (em Mbps)"));
+
+let tempo = ((download * 8) / velLink) ;
+let tempoMin = tempo / 60;
+
+let saidaConsole = `O tempo necessário até concluir o download será de ${tempoMin.toFixed(2)} Minutos.`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -69,20 +80,27 @@
 
     <footer>
         <a href="" id="exercicioAnterior"><button>&#5176; Exercício Anterior</button></a>
-        <span style="display:none;"><a href="" id="proximoExercicio"><button>Próximo Exercício &#5171;</button></a></span>Este é o último exercício.
+        <span style="display:none;"><a href="" id="proximoExercicio"><button>Próximo Exercício &#5171;</button></a></span><span style="color:gainsboro">Este é o último exercício dessa etapa.</span>
     </footer>
 
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        alert("Esse programa irá calcular o tempo aproximado até o termino do download de um arquivo. Siga as instruções.");
+        // peça o tamanho de um arquivo para download (em MB)
+        let download = parseFloat(prompt("Digite o tamanho do seu arquivo para dowload (em MB)"));
+        let velLink = parseFloat(prompt("Digite a velocidade do link de internet (em Mbps)"));
+        
+        let tempo = ((download * 8) / velLink) ;
+        let tempoMin = tempo / 60;
+        
+        let saidaConsole = `O tempo necessário até concluir o download será de ${tempoMin.toFixed(2)} Minutos.`;
+        console.log(saidaConsole);
+        
+        function log(msg) {
+            document.getElementById("console").textContent += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

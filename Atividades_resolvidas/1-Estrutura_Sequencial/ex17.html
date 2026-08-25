@@ -63,10 +63,38 @@
                 <button id="R">
                     Saída do console
                 </button>
+                <button id="runCode">
+                    Rode o código
+                </button>
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-        <pre></pre>
+<pre>
+let metrosQuad = parseFloat(prompt("Informe o tamanho da área em metros quadrados a ser pintada. O programa mostrará a quantidade de latas de tinta a serem compradas e o preço total a ser pago."));
+
+let lataPintaMetros = 108;
+let lataCusta = 80.00;
+let galaoPintaMetros = 21.6;
+let galaoCusta = 25.00;
+
+// Descobrir a quantidade de latas a serem compradas
+let litrosReaisComFolga = (metrosQuad / 6) * 1.1;
+let qntdLatas = litrosReaisComFolga / 18;
+let valorLatas = qntdLatas * lataCusta;    
+
+// Descobrir a quantidade de galoes a serem comprados
+let qntdGaloes = litrosReaisComFolga / 3.6;
+let valorGaloes = qntdGaloes * galaoCusta;
+
+// Calcular a quantidade de latas usadas na mistura. Como queremos sempre o maior valor possível, usamos Math.floor para arredondar para baixo e descobrir quantas latas precisaremos, mesmo que sobre na ultima lata (isso é o "maior" mencionado antes)
+let latasNaMistura = Math.floor(qntdLatas);
+let litrosQueSobram = litrosReaisComFolga - (latasNaMistura * 18);
+let galoesNaMistura = Math.ceil(litrosQueSobram / 3.6);
+let valorTotalMistura = (latasNaMistura * lataCusta) + (galoesNaMistura * galaoCusta);
+
+let saidaConsole = `Quantidade de latas apenas: ${Math.ceil(qntdLatas)} latas. Valor R$${valorLatas.toLocaleString('pt-br', {minimumFractionDigits: 2})}.\n\nQuantidade de galões apenas: ${Math.ceil(qntdGaloes)} galões. Valor R$${valorGaloes.toLocaleString('pt-br', {minimumFractionDigits: 2})}.\n\nQuantidade de latas e galões comprando juntos: ${latasNaMistura} Latas e ${galoesNaMistura} Galões.\nValor Total: R$${valorTotalMistura.toLocaleString('pt-br', {minimumFractionDigits: 2})}.`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -83,14 +111,37 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // resolução da questão em JavaScript
-        /* exemplo de template:
-        *function log(msg) {
-        *    document.getElementById("console").textContent += msg + "\n";
-        *}
-        *console.log("Hello, world!")
-        *log("Hello, world!")
-        */
+        document.getElementById("runCode").addEventListener('click', () => {
+            let metrosQuad = parseFloat(prompt("Informe o tamanho da área em metros quadrados a ser pintada. O programa mostrará a quantidade de latas de tinta a serem compradas e o preço total a ser pago."));
+
+            let lataPintaMetros = 108;
+            let lataCusta = 80.00;
+            let galaoPintaMetros = 21.6;
+            let galaoCusta = 25.00;
+            
+            // Descobrir a quantidade de latas a serem compradas
+            let litrosReaisComFolga = (metrosQuad / 6) * 1.1;
+            let qntdLatas = litrosReaisComFolga / 18;
+            let valorLatas = qntdLatas * lataCusta;    
+            
+            // Descobrir a quantidade de galoes a serem comprados
+            let qntdGaloes = litrosReaisComFolga / 3.6;
+            let valorGaloes = qntdGaloes * galaoCusta;
+            
+            // Calcular a quantidade de latas usadas na mistura. Como queremos sempre o maior valor possível, usamos Math.floor para arredondar para baixo e descobrir quantas latas precisaremos, mesmo que sobre na ultima lata (isso é o "maior" mencionado antes)
+            let latasNaMistura = Math.floor(qntdLatas);
+            let litrosQueSobram = litrosReaisComFolga - (latasNaMistura * 18);
+            let galoesNaMistura = Math.ceil(litrosQueSobram / 3.6);
+            let valorTotalMistura = (latasNaMistura * lataCusta) + (galoesNaMistura * galaoCusta);
+
+            let saidaConsole = `Quantidade de latas apenas: ${Math.ceil(qntdLatas)} latas. Valor R$${valorLatas.toLocaleString('pt-br', {minimumFractionDigits: 2})}.\n\nQuantidade de galões apenas: ${Math.ceil(qntdGaloes)} galões. Valor R$${valorGaloes.toLocaleString('pt-br', {minimumFractionDigits: 2})}.\n\nQuantidade de latas e galões comprando juntos: ${latasNaMistura} Latas e ${galoesNaMistura} Galões.\nValor Total: R$${valorTotalMistura.toLocaleString('pt-br', {minimumFractionDigits: 2})}.`;
+            console.log(saidaConsole);
+
+            function log(msg) {
+                document.getElementById("console").innerHTML = msg;
+            };
+            log(saidaConsole);
+        })        
     </script>
 </body>
 </html>
