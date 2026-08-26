@@ -88,7 +88,7 @@ if (path.endsWith("/index.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
-        <li>Estrutura de decisão</li>
+        <li><a href="Atividades_resolvidas/estruturaDecisao.html">Estrutura de decisão</a></li>
         <li>Estrutura de repetição</li>
         <li>Exercícios sobre listas</li>
         <li>Exercícios sobre funções</li>
@@ -98,11 +98,11 @@ if (path.endsWith("/index.html")) {
         <li>Lista de projetos</li>
         <li>Lista de dados</li>
     </ul>`
-} else if (path.endsWith("/Atividades_resolvidas/EstruturaSequencial.html")) {
+} else if (path.endsWith("/Atividades_resolvidas/EstruturaSequencial.html") || path.endsWith("Atividades_resolvidas/estruturaDecisao.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="./EstruturaSequencial.html">Estrutura sequencial</a></li>
-        <li>Estrutura de decisão</li>
+        <li><a href="./estruturaDecisao.html">Estrutura de decisão</a></li>
         <li>Estrutura de repetição</li>
         <li>Exercícios sobre listas</li>
         <li>Exercícios sobre funções</li>
@@ -116,7 +116,7 @@ if (path.endsWith("/index.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="../EstruturaSequencial.html">Estrutura sequencial</a></li>
-        <li>Estrutura de decisão</li>
+        <li><a href="../estruturaDecisao.html">Estrutura de decisão</a></li>
         <li>Estrutura de repetição</li>
         <li>Exercícios sobre listas</li>
         <li>Exercícios sobre funções</li>
