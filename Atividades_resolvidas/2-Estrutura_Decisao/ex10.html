@@ -67,7 +67,29 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let turno = (prompt("Digite qual turno você estuda.").toLowerCase());
+
+let saidaConsole = "";
+switch (turno) {
+    case "matutino":
+    case "m":
+        saidaConsole = "Seu turno é matutino.\nBom dia!";
+        break;
+    case "vespertino":
+    case "v":
+        saidaConsole = "Seu turno é vespertino.\nBoa tarde!";
+        break;
+    case "noturno":
+    case "n":
+        saidaConsole = "Seu turno é noturno.\nBoa noite!";
+        break;
+    default:
+        saidaConsole = "Erro. Tente escrever novamente."    
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -85,11 +107,33 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para acessar essa atividade, siga as instruções a seguir.")
+
+        let turno = (prompt("Digite qual turno você estuda.").toLowerCase());
+
+        let saidaConsole = "";
+        switch (turno) {
+            case "matutino":
+            case "m":
+                saidaConsole = "Seu turno é matutino.\nBom dia!";
+                break;
+            case "vespertino":
+            case "v":
+                saidaConsole = "Seu turno é vespertino.\nBoa tarde!";
+                break;
+            case "noturno":
+            case "n":
+                saidaConsole = "Seu turno é noturno.\nBoa noite!";
+                break;
+            default:
+                saidaConsole = "Erro. Tente escrever novamente."    
+        };
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

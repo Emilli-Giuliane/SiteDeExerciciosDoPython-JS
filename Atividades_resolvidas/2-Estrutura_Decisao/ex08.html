@@ -56,7 +56,22 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let valorLeite = parseFloat(prompt("Digite o valor do leite"));
+let valorVerdura = parseFloat(prompt("Digite o valor da verdura"));
+let valorBolo = parseFloat(prompt("Digite o valor do bolo"));
+
+let saidaConsole = "";
+if (valorLeite < valorVerdura && valorLeite < valorBolo) {
+    saidaConsole = `O valor do leite está mais barato`;
+} else if (valorVerdura < valorLeite && valorVerdura < valorBolo) {
+    saidaConsole = `O valor da verdura está mais barato`;
+} else if (valorBolo < valorLeite && valorBolo < valorVerdura) {
+    saidaConsole = `O valor do bolo está mais barato`;
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +89,27 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para mostrar esta atividade, Digite um valor imaginário (de sua preferência) para colocar valor em cada um dos itens pedidos");
+
+        // E se eu fizesse o usuário escolher o nome dos produtos mais os preços? teria que usar lista
+        let valorLeite = parseFloat(prompt("Digite o valor do leite"));
+        let valorVerdura = parseFloat(prompt("Digite o valor da verdura"));
+        let valorBolo = parseFloat(prompt("Digite o valor do bolo"));
+
+        let saidaConsole = "";
+        if (valorLeite < valorVerdura && valorLeite < valorBolo) {
+            saidaConsole = `O valor do leite está mais barato`;
+        } else if (valorVerdura < valorLeite && valorVerdura < valorBolo) {
+            saidaConsole = `O valor da verdura está mais barato`;
+        } else if (valorBolo < valorLeite && valorBolo < valorVerdura) {
+            saidaConsole = `O valor do bolo está mais barato`;
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

@@ -56,7 +56,45 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let n1 = parseInt(prompt("Digite o primeiro número"));
+let n2 = parseInt(prompt("Digite o segundo número"));
+let n3 = parseInt(prompt("Digite o terceiro número"));
+
+let saidaConsole = "";
+if (n1 > n2 && n1 > n3) {
+    saidaConsole = `${n1}; `;
+    
+    if (n2 < n3) {
+        saidaConsole += `${n3}; ${n2}`;
+    } else if (n3 < n2) {
+        saidaConsole += `${n2}; ${n3}`;
+    };
+    
+} else if (n2 > n1 && n2 > n3) {
+    saidaConsole = `${n2}; `;
+
+    if (n1 < n3) {
+        saidaConsole += `${n3}; ${n1}`;
+    } else if (n3 < n1) {
+        saidaConsole += `${n1}; ${n3}`;
+    };
+    
+} else if (n3 > n1 && n3 > n2) {
+    saidaConsole = `${n3}; `;
+
+    if (n1 < n2) {
+        saidaConsole += `${n2}; ${n1}`;
+    } else if (n2 < n1) {
+        saidaConsole += `${n1}; ${n2};`
+    };
+
+} else {
+    saidaConsole = "São números todos iguais";
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +112,49 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para ver essa atividade, siga os comandos a seguir.\nEste programa pede 3 números e organiza-os de forma decrescente.");
+
+        let n1 = parseInt(prompt("Digite o primeiro número"));
+        let n2 = parseInt(prompt("Digite o segundo número"));
+        let n3 = parseInt(prompt("Digite o terceiro número"));
+
+        let saidaConsole = "";
+        if (n1 > n2 && n1 > n3) {
+            saidaConsole = `${n1}; `;
+            
+            if (n2 < n3) {
+                saidaConsole += `${n3}; ${n2}`;
+            } else if (n3 < n2) {
+                saidaConsole += `${n2}; ${n3}`;
+            };
+            
+        } else if (n2 > n1 && n2 > n3) {
+            saidaConsole = `${n2}; `;
+
+            if (n1 < n3) {
+                saidaConsole += `${n3}; ${n1}`;
+            } else if (n3 < n1) {
+                saidaConsole += `${n1}; ${n3}`;
+            };
+            
+        } else if (n3 > n1 && n3 > n2) {
+            saidaConsole = `${n3}; `;
+
+            if (n1 < n2) {
+                saidaConsole += `${n2}; ${n1}`;
+            } else if (n2 < n1) {
+                saidaConsole += `${n1}; ${n2};`
+            };
+
+        } else {
+            saidaConsole = "São números todos iguais";
+        };
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>
