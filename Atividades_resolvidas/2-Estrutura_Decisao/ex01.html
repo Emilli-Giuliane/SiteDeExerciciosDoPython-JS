@@ -56,7 +56,22 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Para mostrar essa atividade, siga as instruções.\nEste programa mostrará o maior entre os dois números que serão pedidos.")
+
+let n1 = parseInt(prompt("Digite o primeiro número inteiro"))
+let n2 = parseInt(prompt("Digite o segundo número inteiro"))
+
+let saidaConsole = ""
+
+if(n1 > n2) {
+    saidaConsole = (`O número ${n1} é maior que ${n2}`);
+} else {
+    saidaConsole = (`O número ${n2} é maior que ${n1}`);
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -73,11 +88,24 @@
     <script src="../../script/script.js"></script>
 
     <script>
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para mostrar essa atividade, siga as instruções.\nEste programa mostrará o maior entre os dois números que serão pedidos.")
+
+        let n1 = parseInt(prompt("Digite o primeiro número inteiro"))
+        let n2 = parseInt(prompt("Digite o segundo número inteiro"))
+        
+        let saidaConsole = ""
+        
+        if(n1 > n2) {
+            saidaConsole = (`O número ${n1} é maior que ${n2}`);
+        } else {
+            saidaConsole = (`O número ${n2} é maior que ${n1}`);
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        }
+        log(saidaConsole)
     </script>
 </body>
 </html>

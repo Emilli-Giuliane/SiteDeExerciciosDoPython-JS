@@ -56,7 +56,24 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let n1 = parseInt(prompt("Digite o primeiro número"));
+let n2 = parseInt(prompt("Digite o segundo número"));
+let n3 = parseInt(prompt("Digite o terceiro número"));
+
+let saidaConsole = "";
+if (n1 > n2 && n1 > n3) {
+    saidaConsole = `O número "${n1}" é o maior de todos.`;
+} else if (n2 > n1 && n2 > n3) {
+    saidaConsole = `O número "${n2}" é o maior de todos.`;
+} else if (n3 > n1 && n3 > n2) {
+    saidaConsole = `O número "${n3}" é o maior de todos.`;
+} else {
+    saidaConsole = "São números todos iguais";
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +91,28 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para mostrar essa atividade, preciso que escreva 3 números.\nEste programa dirá qual é o maior número entre eles.");
+        
+        let n1 = parseInt(prompt("Digite o primeiro número"));
+        let n2 = parseInt(prompt("Digite o segundo número"));
+        let n3 = parseInt(prompt("Digite o terceiro número"));
+
+        let saidaConsole = "";
+        if (n1 > n2 && n1 > n3) {
+            saidaConsole = `O número "${n1}" é o maior de todos.`;
+        } else if (n2 > n1 && n2 > n3) {
+            saidaConsole = `O número "${n2}" é o maior de todos.`;
+        } else if (n3 > n1 && n3 > n2) {
+            saidaConsole = `O número "${n3}" é o maior de todos.`;
+        } else {
+            saidaConsole = "São números todos iguais";
+        };
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

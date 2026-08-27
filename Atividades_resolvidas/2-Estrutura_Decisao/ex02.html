@@ -56,7 +56,19 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Para mostrar essa atividade, siga as instruções.\nEste programa mostrará se o número digitado é negativo ou positivo");
+let num = parseInt(prompt("Digite um número inteiro, seja negativo ou positivo."));
+
+let saidaConsole = ""
+if(num >= 0){
+    saidaConsole = `O número ${num} é um número positivo.`;
+}else{
+    saidaConsole = `O número ${num} é um número negativo.`;
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +86,21 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para mostrar essa atividade, siga as instruções.\nEste programa mostrará se o número digitado é negativo ou positivo");
+        let num = parseInt(prompt("Digite um número inteiro, seja negativo ou positivo."));
+
+        let saidaConsole = ""
+        if(num >= 0){
+            saidaConsole = `O número ${num} é um número positivo.`;
+        }else{
+            saidaConsole = `O número ${num} é um número negativo.`;
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        }
+        log(saidaConsole);
     </script>
 </body>
 </html>

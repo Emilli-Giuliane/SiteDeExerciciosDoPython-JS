@@ -58,7 +58,7 @@ header>nav>div>h1 {
 nav {
     color:var(--iconColor);
     display: inline-flex;
-    margin: 15px;
+    padding:10px;
     width: 98%;
     flex-flow: row nowrap;
     justify-content: space-between;

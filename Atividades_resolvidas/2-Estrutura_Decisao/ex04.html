@@ -56,7 +56,19 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let letra = prompt("Digite uma letra qualquer");
+
+let saidaConsole = "";
+// if("aeiou".includes(letra.toLowerCase())){
+if ("AEIOUaeiou".includes(letra)) {
+    saidaConsole = (`${letra.toLowerCase()} é uma vogal.`);
+} else {
+    saidaConsole = (`${letra.toLowerCase()} é uma consoante.`);
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +86,22 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para ver essa atividade, siga as instruções.\nEste programa pergunta por uma letra para dizer se é uma vogal ou consoante.");
+        let letra = prompt("Digite uma letra qualquer");
+
+        let saidaConsole = "";
+        // if("aeiou".includes(letra.toLowerCase())){
+        if ("AEIOUaeiou".includes(letra)) {
+            saidaConsole = (`"${letra.toLowerCase()}" é uma vogal.`);
+        } else {
+            saidaConsole = (`"${letra.toLowerCase()}" é uma consoante.`);
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

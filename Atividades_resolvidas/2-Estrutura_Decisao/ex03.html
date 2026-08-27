@@ -63,7 +63,20 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let saidaConsole = "";
+if (genero === "M") {
+    saidaConsole = "Você é do gênero Masculino.";
+} else if(genero === "F") {
+    saidaConsole = "Você é do gênero Feminino";
+} else if(genero === "Giuliane") {
+    saidaConsole = "Que easter EGg curioso... De qualquer forma, você é do gênero Feminino";
+} else {
+    saidaConsole = "Gênero inválido.\nPor favor, recarregue a página e responda com apenas \"M\" para Masculino ou \"F\" para Feminino";
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -81,11 +94,25 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para mostrar essa atividade, siga as instruções.\nEste programa pedirá e mostrará seu gênero.");
+        let genero = prompt("Informe seu gênero usando apenas as letras \"M\" para Masculino ou \"F\" para Feminino");
+
+        let saidaConsole = "";
+        if (genero === "M") {
+            saidaConsole = "Você é do gênero Masculino.";
+        } else if(genero === "F") {
+            saidaConsole = "Você é do gênero Feminino";
+        } else if(genero === "Giuliane") {
+            saidaConsole = "Que easter EGg curioso... De qualquer forma, você é do gênero Feminino";
+        } else {
+            saidaConsole = "Gênero inválido.\nPor favor, recarregue a página e responda com apenas \"M\" para Masculino ou \"F\" para Feminino";
+        };
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

@@ -63,7 +63,23 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let nota1 = parseFloat(prompt("Digite a primeira nota"));
+let nota2 = parseFloat(prompt("Digite a segunda nota"));
+
+let media = (nota1 + nota2) / 2;
+
+let saidaConsole = "";
+if (media >= 7 && media < 10) {
+    saidaConsole = "Aluno aprovado";
+} else if (media < 7) {
+    saidaConsole = "Aluno reprovado";
+} else if (media === 10) {
+    saidaConsole = "Aluno aprovado com distinção";
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -81,11 +97,28 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para ver essa atividade, siga as instruções.\nEste programa calcula a média de um aluno e diz se está aprovado ou reprovado.");
+
+        let nota1 = parseFloat(prompt("Digite a primeira nota"));
+        let nota2 = parseFloat(prompt("Digite a segunda nota"));
+        
+        let media = (nota1 + nota2) / 2;
+        console.log(media)
+        let saidaConsole = "";
+        if (media >= 7 && media < 10) {
+            saidaConsole = "Aluno aprovado";
+        } else if (media < 7) {
+            saidaConsole = "Aluno reprovado";
+        } else if (media === 10) {
+            saidaConsole = "Aluno aprovado com distinção";
+        };
+       
+        console.log(saidaConsole);
+        
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>
