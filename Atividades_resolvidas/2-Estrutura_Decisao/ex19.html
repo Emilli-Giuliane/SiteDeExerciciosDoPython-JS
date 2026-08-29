@@ -69,7 +69,29 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Siga as instruções para ver esse programa funcionando\nEsse programa irá ler um número menor que 1000 e imprimir a quantidade de centenas, dezenas e unidades desse número informado.");
+// Faça um programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+let numero = parseInt(prompt("Digite um número menor que 1000."));
+let numString = numero.toString().split("");
+let saidaConsole = "";
+
+if (numero <= 1000) {
+    if (numero === 1000) {
+        saidaConsole = `${numString[0]} milhares, ${numString[1]} centenas, ${numString[2]} dezenas, ${numString[3]} unidades.`;
+    } else if (numero >= 100) {
+        saidaConsole = `${numString[0]} centenas, ${numString[1]} dezenas, ${numString[2]} unidades.`;
+    } else if (numero >= 10) {
+        saidaConsole = `${numString[0]} dezenas, ${numString[1]} unidades.`;
+    } else if (numero < 10 && numero >= 0) {
+        saidaConsole = `${numString[0]} unidades.`;
+    }
+} else {
+    saidaConsole = "Número informado não é menor ou igual a 1000. Tente novamente.";
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -87,11 +109,31 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Siga as instruções para ver esse programa funcionando\nEsse programa irá ler um número menor que 1000 e imprimir a quantidade de centenas, dezenas e unidades desse número informado.");
+        // Faça um programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+        let numero = parseInt(prompt("Digite um número menor que 1000."));
+        let numString = numero.toString().split("");
+        let saidaConsole = "";
+
+        if (numero <= 1000) {
+            if (numero === 1000) {
+                saidaConsole = `${numString[0]} milhares, ${numString[1]} centenas, ${numString[2]} dezenas, ${numString[3]} unidades.`;
+            } else if (numero >= 100) {
+                saidaConsole = `${numString[0]} centenas, ${numString[1]} dezenas, ${numString[2]} unidades.`;
+            } else if (numero >= 10) {
+                saidaConsole = `${numString[0]} dezenas, ${numString[1]} unidades.`;
+            } else if (numero < 10 && numero >= 0) {
+                saidaConsole = `${numString[0]} unidades.`;
+            }
+        } else {
+            saidaConsole = "Número informado não é menor ou igual a 1000. Tente novamente.";
+        };
+        
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

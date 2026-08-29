@@ -56,7 +56,51 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Este programa calcula se a data informada é real ou não.");
+
+let data = prompt("Digite a data (formato em dd/mm/aaaa)");
+data = data.split("/");
+let dia = parseInt(data[0]);
+let mes = parseInt(data[1]);
+let ano = parseInt(data[2]);
+let saidaConsole = "";
+let listaMes31 = [1,3,5,7,8,10,12];
+let listaMes30 = [4,6,9,11];
+
+if (listaMes31.includes(mes)) {
+    if (dia <= 31) {
+        saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+    } else {
+        saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+    }
+} else if (listaMes30.includes(mes)) {
+    if (dia <= 30) {
+        saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+    } else {
+        saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+    }
+} else if (mes == 2) {
+    if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+        if (dia <= 29){
+            saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+        } else {
+            saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+        }
+    } else {
+        if (dia <= 28) {
+            saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+        } else {
+            saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+        }
+    }
+} else {
+    saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +118,53 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Este programa calcula se a data informada é real ou não.");
+
+        let data = prompt("Digite a data (formato em dd/mm/aaaa)");
+        data = data.split("/");
+        let dia = parseInt(data[0]);
+        let mes = parseInt(data[1]);
+        let ano = parseInt(data[2]);
+        let saidaConsole = "";
+        let listaMes31 = [1,3,5,7,8,10,12];
+        let listaMes30 = [4,6,9,11];
+
+        if (listaMes31.includes(mes)) {
+            if (dia <= 31) {
+                saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+            } else {
+                saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+            }
+        } else if (listaMes30.includes(mes)) {
+            if (dia <= 30) {
+                saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+            } else {
+                saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+            }
+        } else if (mes == 2) {
+            if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+                if (dia <= 29){
+                    saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+                } else {
+                   saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+                }
+            } else {
+                if (dia <= 28) {
+                    saidaConsole = `O dia ${dia} do mês ${mes} do ano ${ano} existe no calendário real.`;
+                } else {
+                    saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+                }
+            }
+        } else {
+            saidaConsole = "Essa data não é valida. Encerrando o programa. . ."
+
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>
