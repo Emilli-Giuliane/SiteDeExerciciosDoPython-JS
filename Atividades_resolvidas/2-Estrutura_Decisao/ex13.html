@@ -56,7 +56,38 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let dia = parseInt(prompt("Digite o número que corresponde ao dia de hoje da semana.\n\n1 - DOMINGO\n2 - SEGUNDA-FEIRA\n3 - TERÇA-FEIRA\n4 - QUARTA-FEIRA\n5 - QUINTA-FEIRA\n6 - SEXTA-FEIRA\n7 - SÁBADO"));
+let saidaConsole = "";
+
+switch (dia) {
+    case 1:
+        saidaConsole = "Hoje é Domingo-Feira!";
+        break;
+    case 2:
+        saidaConsole = "Hoje é Segunda-Feira!";
+        break;
+    case 3:
+        saidaConsole = "Hoje é Terça-Feira!";
+        break;
+    case 4:
+        saidaConsole = "Hoje é Quarta-Feira!";
+        break;
+    case 5:
+        saidaConsole = "Hoje é Quinta-Feira!";
+        break;
+    case 6:
+        saidaConsole = "Hoje é Sexta-Feira!";
+        break;
+    case 7:
+        saidaConsole = "Hoje é Sábado-Feira!";
+        break;
+    default:
+        saidaConsole = "valor inválido";
+};
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +105,40 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        let dia = parseInt(prompt("Digite o número que corresponde ao dia de hoje da semana.\n\n1 - DOMINGO\n2 - SEGUNDA-FEIRA\n3 - TERÇA-FEIRA\n4 - QUARTA-FEIRA\n5 - QUINTA-FEIRA\n6 - SEXTA-FEIRA\n7 - SÁBADO"));
+        let saidaConsole = "";
+        
+        switch (dia) {
+            case 1:
+                saidaConsole = "Hoje é Domingo-Feira!";
+                break;
+            case 2:
+                saidaConsole = "Hoje é Segunda-Feira!";
+                break;
+            case 3:
+                saidaConsole = "Hoje é Terça-Feira!";
+                break;
+            case 4:
+                saidaConsole = "Hoje é Quarta-Feira!";
+                break;
+            case 5:
+                saidaConsole = "Hoje é Quinta-Feira!";
+                break;
+            case 6:
+                saidaConsole = "Hoje é Sexta-Feira!";
+                break;
+            case 7:
+                saidaConsole = "Hoje é Sábado-Feira!";
+                break;
+            default:
+                saidaConsole = "valor inválido";
+        };
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

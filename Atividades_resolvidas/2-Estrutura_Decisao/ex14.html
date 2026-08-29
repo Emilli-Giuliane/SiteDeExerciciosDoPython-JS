@@ -67,7 +67,35 @@ Entre 4.0 e zero                            E
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let nota1 = parseFloat(prompt("Digite o quanto tirou na primeira nota"));
+let nota2 = parseFloat(prompt("Digite o quanto tirou na segunda nota"));
+let media = (nota1 + nota2) / 2;
+let saidaConsole = `Primeira nota: ${nota1}.\nSegunda nota ${nota2}.\n\nMédia de aproveitamento: ${media}.\n\n`;
+let conceito = "";
+let situacao = "";
+
+if (media >= 9.0 && media <= 10.0) {
+    conceito = "A";
+    situacao = "APROVADO!";
+} else if (media >= 7.5 && media < 9.0) {
+    conceito = "B";
+    situacao = "APROVADO!"
+} else if (media >= 6.0 && media < 7.5) {
+    conceito = "C";
+    situacao = "APROVADO!"
+} else if (media >= 4.0 && media < 6.0) {
+    conceito = "D";
+    situacao = "REPROVADO.";
+} else if (media >= 0.0 && media < 4.0) {
+    conceito = "E";
+    situacao = "REPROVADO.";
+}
+
+
+saidaConsole += `Conceito: ${conceito}.\nSituação: ${situacao}`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -85,11 +113,38 @@ Entre 4.0 e zero                            E
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Faça o que se pede a seguir. Coloque valores irreais (imaginários de sua preferência).");
+        let nota1 = parseFloat(prompt("Digite o quanto tirou na primeira nota"));
+        let nota2 = parseFloat(prompt("Digite o quanto tirou na segunda nota"));
+        let media = (nota1 + nota2) / 2;
+        let saidaConsole = `Primeira nota: ${nota1}.\nSegunda nota ${nota2}.\n\nMédia de aproveitamento: ${media}.\n\n`;
+        let conceito = "";
+        let situacao = "";
+
+        if (media >= 9.0 && media <= 10.0) {
+            conceito = "A";
+            situacao = "APROVADO!";
+        } else if (media >= 7.5 && media < 9.0) {
+            conceito = "B";
+            situacao = "APROVADO!"
+        } else if (media >= 6.0 && media < 7.5) {
+            conceito = "C";
+            situacao = "APROVADO!"
+        } else if (media >= 4.0 && media < 6.0) {
+            conceito = "D";
+            situacao = "REPROVADO.";
+        } else if (media >= 0.0 && media < 4.0) {
+            conceito = "E";
+            situacao = "REPROVADO.";
+        }
+        
+        
+        saidaConsole += `Conceito: ${conceito}.\nSituação: ${situacao}`;
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

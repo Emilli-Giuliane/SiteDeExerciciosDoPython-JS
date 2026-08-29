@@ -72,7 +72,30 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let salario = parseFloat(prompt("Informe o valor do salário atual"));
+let percentualAumento = 0;
+let valorAumento = 0;
+let valorNovoSalario = 0;
+let saidaConsole = "";
+
+if (salario <= 280.00) {
+    percentualAumento = 20 / 100;
+} else if (salario > 280.00 && salario < 700.00) {
+    percentualAumento = 15 / 100;
+} else if (salario >= 700.00 && salario < 1500.00) {
+    percentualAumento = 10 / 100;
+} else {
+    percentualAumento = 5 / 100;
+};
+
+valorAumento = (salario * percentualAumento);
+valorNovoSalario = valorAumento + salario;
+
+saidaConsole = `Seu salário é de ${salario.toFixed(2)}.\nO percentual de aumento aplicado é de ${100 * percentualAumento}%.\nO valor do aumento é de ${valorAumento}.\nO novo valor do seu salário após o aumento é de ${valorNovoSalario}.`;
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -90,11 +113,36 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para mostrar essa atividade funcionando, por favor siga as instruções.\nDescubra o valor do salário após o aumento.");
+        //  recebe o salário
+        let salario = parseFloat(prompt("Informe o valor do salário atual"));
+        let percentualAumento = 0;
+        let valorAumento = 0;
+        let valorNovoSalario = 0;
+        let saidaConsole = "";
+
+        if (salario <= 280.00) {
+            percentualAumento = 20 / 100;
+        } else if (salario > 280.00 && salario < 700.00) {
+            percentualAumento = 15 / 100;
+        } else if (salario >= 700.00 && salario < 1500.00) {
+            percentualAumento = 10 / 100;
+        } else {
+            percentualAumento = 5 / 100;
+        };
+
+        valorAumento = (salario * percentualAumento);
+        valorNovoSalario = valorAumento + salario;
+        
+        saidaConsole = `Seu salário é de ${salario.toFixed(2)}.\nO percentual de aumento aplicado é de ${100 * percentualAumento}%.\nO valor do aumento é de ${valorAumento}.\nO novo valor do seu salário após o aumento é de ${valorNovoSalario}.`;
+        
+        console.log(saidaConsole);
+
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+
+        log(saidaConsole);
     </script>
 </body>
 </html>

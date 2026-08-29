@@ -46,13 +46,14 @@
                 Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
             </p>                
 
-            <ul>
+            <ul class="identarLista">
                 <li>Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;</li>
                 <li>Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;</li>
                 <li>Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;</li>
                 <li>Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;</li>
             </ul>
             <!-- Botões de toggle, Código/Resposta -->
+             
             <div class="toggle_CR">
                 <button id="C">
                     Código da resposta
@@ -63,7 +64,29 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Programa para calcular equação do segundo grau.");
+let a = parseInt(prompt("Informe o valor de a"));
+let b = parseInt(prompt("Informe o valor de b"));
+let c = parseInt(prompt("Informe o valor de c"));
+let delta = b ** 2 - 4 * a * c;
+let saidaConsole = "";
+
+// Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;
+if (a !== 0) {
+    if (delta < 0) { // Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
+        saidaConsole = "Delta calculado é negativo, a equação não possui raizes reais. Encerrando o programa. . ."
+    } else if (delta === 0) { // Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
+        saidaConsole = "O delta calculado é igual a zero. A equação possui apenas uma raiz real."
+    } else if (delta > 0) { // Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+        saidaConsole = "Delta é positivo, a equação possui duas raizes reais.";
+    }
+} else {
+    saidaConsole = "Valor inválido. \"a\" não pode conter valor 0. Encerrando o programa. . .";
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -81,11 +104,31 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Programa para calcular equação do segundo grau.");
+        let a = parseInt(prompt("Informe o valor de a"));
+        let b = parseInt(prompt("Informe o valor de b"));
+        let c = parseInt(prompt("Informe o valor de c"));
+        let delta = b ** 2 - 4 * a * c;
+        let saidaConsole = "";
+
+        // Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;
+        if (a !== 0) {
+            if (delta < 0) { // Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
+                saidaConsole = "Delta calculado é negativo, a equação não possui raizes reais. Encerrando o programa. . ."
+            } else if (delta === 0) { // Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
+                saidaConsole = "O delta calculado é igual a zero. A equação possui apenas uma raiz real."
+            } else if (delta > 0) { // Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+                saidaConsole = "Delta é positivo, a equação possui duas raizes reais.";
+            }
+        } else {
+            saidaConsole = "Valor inválido. \"a\" não pode conter valor 0. Encerrando o programa. . .";
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

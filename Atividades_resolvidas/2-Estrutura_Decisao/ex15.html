@@ -67,7 +67,28 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let l1 = parseInt(prompt("Digite o valor do primeiro lado"));
+let l2 = parseInt(prompt("Digite o valor do segundo lado"));
+let l3 = parseInt(prompt("Digite o valor do terceiro lado"));        
+let saidaConsole = "";
+
+// Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+if ((l1 + l2) > l3) {
+    saidaConsole = "É um triângulo";
+    // Triângulo Equilátero: três lados iguais;
+    if (l1 === l2 && l1 === l3) {
+        saidaConsole += "\nÉ um triângulo Equilátero."
+    } else if (l1 === l2 || l1 === l3 || l2 === l3) { // Triângulo Isósceles: quaisquer dois lados iguais;
+        saidaConsole += "\nÉ um triângulo Isósceles."
+    } else if (l1 != l2 && l1 != l3 && l2 != l3) { // Triângulo Escaleno: três lados diferentes;
+        saidaConsole += "\nÉ um triângulo Escaleno.";
+    }} else {
+    saidaConsole = "Não é um triangulo";
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -85,11 +106,31 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Digite os três lados de um triângulo e comprove se é um triangulo Equilátero, Escaleno ou isósceles.")
+        let l1 = parseInt(prompt("Digite o valor do primeiro lado"));
+        let l2 = parseInt(prompt("Digite o valor do segundo lado"));
+        let l3 = parseInt(prompt("Digite o valor do terceiro lado"));        
+        let saidaConsole = "";
+        
+        // Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+        if ((l1 + l2) > l3) {
+            saidaConsole = "É um triângulo";
+            // Triângulo Equilátero: três lados iguais;
+            if (l1 === l2 && l1 === l3) {
+                saidaConsole += "\nÉ um triângulo Equilátero."
+            } else if (l1 === l2 || l1 === l3 || l2 === l3) { // Triângulo Isósceles: quaisquer dois lados iguais;
+                saidaConsole += "\nÉ um triângulo Isósceles."
+            } else if (l1 != l2 && l1 != l3 && l2 != l3) { // Triângulo Escaleno: três lados diferentes;
+                saidaConsole += "\nÉ um triângulo Escaleno.";
+            }} else {
+            saidaConsole = "Não é um triangulo";
+        }
+        
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

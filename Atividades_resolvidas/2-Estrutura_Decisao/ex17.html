@@ -56,7 +56,20 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Este programa calcula se um ano é bissexto ou não.");
+
+let ano = parseInt(prompt("Digite o ano (Ex.:1900)"));
+let saidaConsole = "";
+
+if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+    saidaConsole = "O ano " + ano + " é bissexto";
+} else {
+    saidaConsole = "O ano " + ano + " não é bissexto";
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +87,22 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Este programa calcula se um ano é bissexto ou não.");
+
+        let ano = parseInt(prompt("Digite o ano (Ex.:1900)"));
+        let saidaConsole = "";
+        
+        if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+            saidaConsole = "O ano " + ano + " é bissexto";
+        } else {
+            saidaConsole = "O ano " + ano + " não é bissexto";
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>
