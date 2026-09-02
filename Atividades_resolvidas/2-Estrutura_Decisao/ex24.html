@@ -61,7 +61,57 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let num1 = parseFloat(prompt("Digite um número"));
+let num2 = parseFloat(prompt("Digite mais um número"));
+let resultado = 0;
+let operacao = parseInt(prompt("Qual operação gostaria de fazer? Digite em números para esconlher uma das opções a baixo\n\n1 - Somar;\n2 - Subtrair;\n3 - Multiplicar;\n4 - Dividir."));
+let saidaConsole = "";
+
+switch (operacao) {
+    case 1:
+        resultado = num1 + num2;
+        saidaConsole = `O resultado de ${num1} + ${num2} é: ${resultado}.`
+        break;
+    case 2:
+        resultado = num1 - num2;
+        saidaConsole = `O resultado de ${num1} - ${num2} é: ${resultado}.`
+        break;
+    case 3:
+        resultado = num1 * num2;
+        saidaConsole = `O resultado de ${num1} * ${num2} é: ${resultado}.`
+        break;
+    case 4:
+        resultado = num1 / num2;
+        saidaConsole = `O resultado de ${num1} / ${num2} é: ${resultado}.`
+        break;
+    default:
+        saidaConsole = "Opção inválida. Por favor digite uma opção válida."
+}
+// Impar ou Par
+if (resultado % 2 === 0) {
+    saidaConsole += "\nO número " + resultado + " é um número PAR!";
+} else {
+    saidaConsole += "\nO número " + resultado + " é um número IMPAR!";
+}
+
+// Positivo ou Negativo
+if (resultado >= 0){
+    saidaConsole += `\nO número ${resultado} é um número POSITIVO`;
+} else {
+    saidaConsole += `\nO número ${resultado} é um número NEGATIVO`;
+}
+
+// Inteiro ou Decimal
+if (((resultado.toFixed(2)).toString()).includes(".00")) {
+    saidaConsole += `\nO número ${resultado} é um inteiro.`;
+} else {
+    saidaConsole += `\nO número ${resultado} é um decimal.`;
+}
+
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -77,13 +127,61 @@
 
     <script src="../../script/script.js"></script>
 
-    <script>
+    <script>        
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        let num1 = parseFloat(prompt("Digite um número"));
+        let num2 = parseFloat(prompt("Digite mais um número"));
+        let resultado = 0;
+        let operacao = parseInt(prompt("Qual operação gostaria de fazer? Digite em números para esconlher uma das opções a baixo\n\n1 - Somar;\n2 - Subtrair;\n3 - Multiplicar;\n4 - Dividir."));
+        let saidaConsole = "";
+
+        switch (operacao) {
+            case 1:
+                resultado = num1 + num2;
+                saidaConsole = `O resultado de ${num1} + ${num2} é: ${resultado}.`
+                break;
+            case 2:
+                resultado = num1 - num2;
+                saidaConsole = `O resultado de ${num1} - ${num2} é: ${resultado}.`
+                break;
+            case 3:
+                resultado = num1 * num2;
+                saidaConsole = `O resultado de ${num1} * ${num2} é: ${resultado}.`
+                break;
+            case 4:
+                resultado = num1 / num2;
+                saidaConsole = `O resultado de ${num1} / ${num2} é: ${resultado}.`
+                break;
+            default:
+                saidaConsole = "Opção inválida. Por favor digite uma opção válida."
+        }
+        // Impar ou Par
+        if (resultado % 2 === 0) {
+            saidaConsole += "\nO número " + resultado + " é um número PAR!";
+        } else {
+            saidaConsole += "\nO número " + resultado + " é um número IMPAR!";
+        }
+
+        // Positivo ou Negativo
+        if (resultado >= 0){
+            saidaConsole += `\nO número ${resultado} é um número POSITIVO`;
+        } else {
+            saidaConsole += `\nO número ${resultado} é um número NEGATIVO`;
+        }
+
+        // Inteiro ou Decimal
+        if (((resultado.toFixed(2)).toString()).includes(".00")) {
+            saidaConsole += `\nO número ${resultado} é um inteiro.`;
+        } else {
+            saidaConsole += `\nO número ${resultado} é um decimal.`;
+        }
+
+        
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

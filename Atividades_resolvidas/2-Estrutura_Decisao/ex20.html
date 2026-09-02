@@ -62,7 +62,24 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Este programa fará a leitura de 3 notas acadêmicas de um aluno para mostrar na tela se ele foi aprovado ou não. Por favor siga os comandos para ver esse programa funcionando.");
+let n1 = parseFloat(prompt("Informe o valor da primeira nota"));
+let n2 = parseFloat(prompt("Informe o valor da segunda nota"));
+let n3 = parseFloat(prompt("Informe o valor da terceira nota"));
+let media = (n1 + n2 + n3) / 3;
+let saidaConsole = "";
+
+if (media >= 7 && media < 10) {
+    saidaConsole = `Sua nota na média foi ${media.toFixed(1)}.\nParabéns! Você foi aprovado.`; 
+} else if (media === 10) {
+    saidaConsole = `Sua nota na média foi ${media.toFixed(1)}.\nParabéns! Você foi aprovado com distinção!`; 
+} else if (media < 7) {
+    saidaConsole = `Sua nota na média foi ${media.toFixed(1)}.\nVocê foi reprovado.`; 
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -80,11 +97,27 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        // Faça um programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar:
+        alert("Este programa fará a leitura de 3 notas acadêmicas de um aluno para mostrar na tela se ele foi aprovado ou não. Por favor siga os comandos para ver esse programa funcionando.");
+        let n1 = parseFloat(prompt("Informe o valor da primeira nota"));
+        let n2 = parseFloat(prompt("Informe o valor da segunda nota"));
+        let n3 = parseFloat(prompt("Informe o valor da terceira nota"));
+        let media = (n1 + n2 + n3) / 3;
+        let saidaConsole = "";
+
+        if (media >= 7 && media < 10) {
+            saidaConsole = `Sua nota na média foi ${media.toFixed(1)}.\nParabéns! Você foi aprovado.`; 
+        } else if (media === 10) {
+            saidaConsole = `Sua nota na média foi ${media.toFixed(1)}.\nParabéns! Você foi aprovado com distinção!`; 
+        } else if (media < 7) {
+            saidaConsole = `Sua nota na média foi ${media.toFixed(1)}.\nVocê foi reprovado.`; 
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

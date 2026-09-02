@@ -56,8 +56,12 @@
             </ul>
 
             <p>
-                Gasolina: - até 20 litros: desconto de 4% por litro - acima de 20 litros: desconto de 6% por litro
+                Gasolina:
             </p>
+            <ul class="identarLista">
+                <li>até 20 litros: desconto de 4% por litro</li>
+                <li>acima de 20 litros: desconto de 6% por litro</li>
+            </ul>
 
             <p>
                 Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.
@@ -73,7 +77,33 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let A = 1.90;
+let G = 2.50;
+let tipoComb = prompt("Digite a letra correspondente ao tipo de combistível que você deseja:\nA - Alcool;\nG - Gasolina;");
+let quantidadeAbastecer = prompt("Digite o quanto que você irá abastecer.");
+let valorTotal = 0;
+let saidaConsole = "";
+
+if (tipoComb === "A") {
+    valorTotal = A * quantidadeAbastecer
+    if (quantidadeAbastecer <= 20) {
+        valorTotal = valorTotal - (valorTotal * 0.03);
+    } else {
+        valorTotal = valorTotal - (valorTotal * 0.05) ;
+    }
+} else if (tipoComb === "G"){
+    valorTotal = G * quantidadeAbastecer;
+    if (quantidadeAbastecer <= 20) {
+        valorTotal = valorTotal - (valorTotal * 0.04);
+    } else {
+        valorTotal = valorTotal - (valorTotal * 0.06);
+    }
+}
+
+saidaConsole = `O cliente pagará R$${valorTotal}`;
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -91,11 +121,36 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        let A = 1.90;
+        let G = 2.50;
+        let tipoComb = prompt("Digite a letra correspondente ao tipo de combistível que você deseja:\nA - Alcool;\nG - Gasolina;");
+        let quantidadeAbastecer = prompt("Digite o quanto que você irá abastecer.");
+        let valorTotal = 0;
+        let saidaConsole = "";
+
+        if (tipoComb === "A") {
+            valorTotal = A * quantidadeAbastecer
+            if (quantidadeAbastecer <= 20) {
+                valorTotal = valorTotal - (valorTotal * 0.03);
+            } else {
+                valorTotal = valorTotal - (valorTotal * 0.05) ;
+            }
+        } else if (tipoComb === "G"){
+            valorTotal = G * quantidadeAbastecer;
+            if (quantidadeAbastecer <= 20) {
+                valorTotal = valorTotal - (valorTotal * 0.04);
+            } else {
+                valorTotal = valorTotal - (valorTotal * 0.06);
+            }
+        }
+
+        saidaConsole = `O cliente pagará R$${valorTotal}`;
+        console.log(saidaConsole);
+
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

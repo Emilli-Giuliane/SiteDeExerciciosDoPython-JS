@@ -56,7 +56,20 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Para ver esse programa rodando, siga as instruções.\nEste programa pedirá um número inteiro e então imprimirá se esse mesmo número é par ou impar.");
+let num = parseInt(prompt("Digite um número inteiro"));
+let saidaConsole = "";
+
+if (num % 2 === 0) {
+    saidaConsole = "O número " + num + " é um número PAR!";
+} else {
+    saidaConsole = "O número " + num + " é um número IMPAR!";
+}
+
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +87,21 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para ver esse programa rodando, siga as instruções.\nEste programa pedirá um número inteiro e então imprimirá se esse mesmo número é par ou impar.");
+        let num = parseInt(prompt("Digite um número inteiro"));
+        let saidaConsole = "";
+
+        if (num % 2 === 0) {
+            saidaConsole = "O número " + num + " é um número PAR!";
+        } else {
+            saidaConsole = "O número " + num + " é um número IMPAR!";
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

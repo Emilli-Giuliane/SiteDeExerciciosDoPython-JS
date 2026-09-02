@@ -68,7 +68,48 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Esse programa faz 5 perguntas para determinar se você é inocente ou não em um caso criminal.");
+let respostasMarcadas = 0;
+let saidaConsole = "";
+
+let pergunta = prompt("Telefonou para a vítima?\n1 - sim;\n2 - não");
+if (pergunta === "1") {
+    respostasMarcadas += 1;
+}
+
+pergunta = prompt("Esteve no local do crime?\n1 - sim;\n2 - não");
+if (pergunta === "1") {
+    respostasMarcadas += 1;
+}
+
+pergunta = prompt("Mora perto da vítima?\n1 - sim;\n2 - não");
+if (pergunta === "1") {
+    respostasMarcadas += 1;
+}
+
+pergunta = prompt("Devia para a vítima?\n1 - sim;\n2 - não");
+if (pergunta === "1") {
+    respostasMarcadas += 1;
+}
+
+pergunta = prompt("Já trabalhou com a vítima?\n1 - sim;\n2 - não");
+if (pergunta === "1") {
+    respostasMarcadas += 1;
+}
+
+if (respostasMarcadas === 5) {
+    saidaConsole = "Com " + respostasMarcadas + ", você é o assasíno."
+} else if (respostasMarcadas === 3 || respostasMarcadas === 4) {
+    saidaConsole = "Com " + respostasMarcadas + ", você é um cúmplice."
+} else if (respostasMarcadas === 2) {
+    saidaConsole = "Com " + respostasMarcadas + ", você é um suspeito."
+} else {
+    saidaConsole = "Com " + respostasMarcadas + ", você é inocente."
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -86,11 +127,50 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Esse programa faz 5 perguntas para determinar se você é inocente ou não em um caso criminal.");
+        let respostasMarcadas = 0;
+        let saidaConsole = "";
+        
+        let pergunta = prompt("Telefonou para a vítima?\n1 - sim;\n2 - não");
+        if (pergunta === "1") {
+            respostasMarcadas += 1;
+        }
+        
+        pergunta = prompt("Esteve no local do crime?\n1 - sim;\n2 - não");
+        if (pergunta === "1") {
+            respostasMarcadas += 1;
+        }
+        
+        pergunta = prompt("Mora perto da vítima?\n1 - sim;\n2 - não");
+        if (pergunta === "1") {
+            respostasMarcadas += 1;
+        }
+
+        pergunta = prompt("Devia para a vítima?\n1 - sim;\n2 - não");
+        if (pergunta === "1") {
+            respostasMarcadas += 1;
+        }
+
+        pergunta = prompt("Já trabalhou com a vítima?\n1 - sim;\n2 - não");
+        if (pergunta === "1") {
+            respostasMarcadas += 1;
+        }
+
+        if (respostasMarcadas === 5) {
+            saidaConsole = "Com " + respostasMarcadas + ", você é o assasíno."
+        } else if (respostasMarcadas === 3 || respostasMarcadas === 4) {
+            saidaConsole = "Com " + respostasMarcadas + ", você é um cúmplice."
+        } else if (respostasMarcadas === 2) {
+            saidaConsole = "Com " + respostasMarcadas + ", você é um suspeito."
+        } else {
+            saidaConsole = "Com " + respostasMarcadas + ", você é inocente."
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

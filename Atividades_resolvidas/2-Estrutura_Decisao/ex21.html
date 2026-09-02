@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -62,7 +63,73 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Siga as instruções para ver esse programa funcionando.\nEsse programa é uma simulação de caixa que irá ler uma quantia menor que R$600 e imprimir a quantidade de notas em dinheiro necessárias para chegar até o valor desejado.");
+let numero = parseFloat(prompt("Digite uma quantia menor que R$600 e que seja maior que R$10."));
+let numString = numero.toString().split("");
+let notasDinheiro = [1,5,10,50,100];
+let saidaConsole = `Valor digitado: R$${numero}`;
+
+if (numero <= 600 && numero >= 100) {
+    if (numero >= 100) {
+        saidaConsole += `\n${numString[0]} notas de R$${notasDinheiro[4]}`;
+    }
+    if ((numString[1] * 10) >= notasDinheiro[3]) { // 50
+        saidaConsole += `\nUma nota de R$${notasDinheiro[3]}`;
+        
+    } else if ((numString[1] * 10) >= notasDinheiro[2]) {
+        saidaConsole += `\n${numString[1]} notas de R$${notasDinheiro[2]}`;
+    }
+    if (((numString[1] * 10) - notasDinheiro[3]) >= notasDinheiro[2]) { //10
+        saidaConsole += `\n${((numString[1] * 10) - notasDinheiro[3]) / notasDinheiro[2]} notas de R$${notasDinheiro[2]}`;
+    }
+    if (numString[2] >= 5) {
+        saidaConsole += `\nUma nota de R$${notasDinheiro[1]}`;
+        if ((numString[2] - 5) < 5 && (numString[2] - 5) !== 0) {
+            saidaConsole += `\n${numString[2] - notasDinheiro[1]} notas de R$${notasDinheiro[0]}`;
+        }
+    } 
+    if ((numString[2]) < 5 && numString[2] != 0) {
+        saidaConsole += `\n${numString[2] * 1} notas de R$${notasDinheiro[0]}`;
+    }
+    // TODO: Fazer o mesmo para as dezenas e unidades
+} else if (numero >= 50 && numero < 100) {
+    if ((numString[0] * 10) >= notasDinheiro[3]) { // 50
+        saidaConsole += `\nUma nota de R$${notasDinheiro[3]}`;
+    } else if ((numString[0] * 10) >= notasDinheiro[2]) {
+        saidaConsole += `\n${numString[0]} notas de R$${notasDinheiro[2]}`;
+    }
+    if (((numString[0] * 10) - notasDinheiro[3]) >= notasDinheiro[2]) { //10
+        saidaConsole += `\n${((numString[0] * 10) - notasDinheiro[3]) / notasDinheiro[2]} notas de R$${notasDinheiro[2]}`;
+    }
+    if (numString[1] >= 5) {
+        saidaConsole += `\nUma nota de R$${notasDinheiro[1]}`;
+        if ((numString[1] - 5) < 5 && (numString[1] - 5) !== 0) {
+            saidaConsole += `\n${numString[1] - notasDinheiro[1]} notas de R$${notasDinheiro[0]}`;
+        }
+    } 
+    if ((numString[1]) < 5 && numString[1] != 0) {
+        saidaConsole += `\n${numString[1] * 1} notas de R$${notasDinheiro[0]}`;
+    }
+} else if (numero >= 10 && numero < 50) {
+    saidaConsole += `\n${numString[0]} notas de R$${notasDinheiro[2]}`;
+    if (numString[1] >= 5) {
+        saidaConsole += `\nUma nota de ${notasDinheiro[1]}`;
+        if ((numString[1] - 5) < 5 && (numString[1] - 5) !== 0) {
+            saidaConsole += `\n${numString[1] - notasDinheiro[1]} notas de R$${notasDinheiro[0]}`;
+        }
+    } 
+    if ((numString[1]) < 5 && numString[1] != 0) {
+        saidaConsole += `\n${numString[1] * 1} notas de R$${notasDinheiro[0]}`;
+    }
+} else if (numero < 10) {
+    saidaConsole = `[ERRO] Valor muito baixo. Por favor escolha um valor entre R$600 e R$10`;
+} else if (numero > 600) {
+    saidaConsole = `[ERRO] Valor muito alto. Por favor escolha um valor entre R$600 e R$10`;
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -80,11 +147,75 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Siga as instruções para ver esse programa funcionando.\nEsse programa é uma simulação de caixa que irá ler uma quantia menor que R$600 e imprimir a quantidade de notas em dinheiro necessárias para chegar até o valor desejado.");
+        let numero = parseFloat(prompt("Digite uma quantia menor que R$600 e que seja maior que R$10."));
+        let numString = numero.toString().split("");
+        let notasDinheiro = [1,5,10,50,100];
+        let saidaConsole = `Valor digitado: R$${numero}\n`;
+
+        if (numero <= 600 && numero >= 100) {
+            if (numero >= 100) {
+                saidaConsole += `\n${numString[0]} notas de R$${notasDinheiro[4]}`;
+            }
+            if ((numString[1] * 10) >= notasDinheiro[3]) { // 50
+                saidaConsole += `\nUma nota de R$${notasDinheiro[3]}`;
+                
+            } else if ((numString[1] * 10) >= notasDinheiro[2]) {
+                saidaConsole += `\n${numString[1]} notas de R$${notasDinheiro[2]}`;
+            }
+            if (((numString[1] * 10) - notasDinheiro[3]) >= notasDinheiro[2]) { //10
+                saidaConsole += `\n${((numString[1] * 10) - notasDinheiro[3]) / notasDinheiro[2]} notas de R$${notasDinheiro[2]}`;
+            }
+            if (numString[2] >= 5) {
+                saidaConsole += `\nUma nota de R$${notasDinheiro[1]}`;
+                if ((numString[2] - 5) < 5 && (numString[2] - 5) !== 0) {
+                    saidaConsole += `\n${numString[2] - notasDinheiro[1]} notas de R$${notasDinheiro[0]}`;
+                }
+            } 
+            if ((numString[2]) < 5 && numString[2] != 0) {
+                saidaConsole += `\n${numString[2] * 1} notas de R$${notasDinheiro[0]}`;
+            }
+            // TODO: Fazer o mesmo para as dezenas e unidades
+        } else if (numero >= 50 && numero < 100) {
+            if ((numString[0] * 10) >= notasDinheiro[3]) { // 50
+                saidaConsole += `\nUma nota de R$${notasDinheiro[3]}`;
+            } else if ((numString[0] * 10) >= notasDinheiro[2]) {
+                saidaConsole += `\n${numString[0]} notas de R$${notasDinheiro[2]}`;
+            }
+            if (((numString[0] * 10) - notasDinheiro[3]) >= notasDinheiro[2]) { //10
+                saidaConsole += `\n${((numString[0] * 10) - notasDinheiro[3]) / notasDinheiro[2]} notas de R$${notasDinheiro[2]}`;
+            }
+            if (numString[1] >= 5) {
+                saidaConsole += `\nUma nota de R$${notasDinheiro[1]}`;
+                if ((numString[1] - 5) < 5 && (numString[1] - 5) !== 0) {
+                    saidaConsole += `\n${numString[1] - notasDinheiro[1]} notas de R$${notasDinheiro[0]}`;
+                }
+            } 
+            if ((numString[1]) < 5 && numString[1] != 0) {
+                saidaConsole += `\n${numString[1] * 1} notas de R$${notasDinheiro[0]}`;
+            }
+        } else if (numero >= 10 && numero < 50) {
+            saidaConsole += `\n${numString[0]} notas de R$${notasDinheiro[2]}`;
+            if (numString[1] >= 5) {
+                saidaConsole += `\nUma nota de ${notasDinheiro[1]}`;
+                if ((numString[1] - 5) < 5 && (numString[1] - 5) !== 0) {
+                    saidaConsole += `\n${numString[1] - notasDinheiro[1]} notas de R$${notasDinheiro[0]}`;
+                }
+            } 
+            if ((numString[1]) < 5 && numString[1] != 0) {
+                saidaConsole += `\n${numString[1] * 1} notas de R$${notasDinheiro[0]}`;
+            }
+        } else if (numero < 10) {
+            saidaConsole = `[ERRO] Valor muito baixo. Por favor escolha um valor entre R$600 e R$10`;
+        } else if (numero > 600) {
+            saidaConsole = `[ERRO] Valor muito alto. Por favor escolha um valor entre R$600 e R$10`;
+        }
+
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

@@ -56,7 +56,19 @@
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Para ver essa atividade funcionando, por favor siga as instruções:\nEsse programa pedirá um número e printará na tela se ele é inteiro ou decimal");
+let num = parseFloat(prompt("Digite um número, inteiro ou decimal."));
+let saidaConsole = "";
+
+if (((num.toFixed(2)).toString()).includes(".00")) {
+    saidaConsole = `O número ${num} é um inteiro.`;
+} else {
+    saidaConsole = `O número ${num} é um decimal.`;
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -74,11 +86,21 @@
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Para ver essa atividade funcionando, por favor siga as instruções:\nEsse programa pedirá um número e printará na tela se ele é inteiro ou decimal");
+        let num = parseFloat(prompt("Digite um número, inteiro ou decimal."));
+        let saidaConsole = "";
+        
+        if (((num.toFixed(2)).toString()).includes(".00")) {
+            saidaConsole = `O número ${num} é um inteiro.`;
+        } else {
+            saidaConsole = `O número ${num} é um decimal.`;
+        }
+        
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>
