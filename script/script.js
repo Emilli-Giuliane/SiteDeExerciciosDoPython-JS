@@ -83,13 +83,14 @@ document.querySelector(".theme").addEventListener('click', () => {
 });
 
 const path = window.location.pathname;
+let listaCaminhos = ["/Atividades_resolvidas/EstruturaSequencial.html","Atividades_resolvidas/estruturaDecisao.html","Atividades_resolvidas/estruturaRepeticao.html"]
 console.log(path)
 if (path.endsWith("/index.html")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="Atividades_resolvidas/estruturaDecisao.html">Estrutura de decisão</a></li>
-        <li>Estrutura de repetição</li>
+        <li><a href="Atividades_resolvidas/estruturaRepeticao.html">Estrutura de repetição</a></li>
         <li>Exercícios sobre listas</li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
@@ -98,12 +99,13 @@ if (path.endsWith("/index.html")) {
         <li>Lista de projetos</li>
         <li>Lista de dados</li>
     </ul>`
-} else if (path.endsWith("/Atividades_resolvidas/EstruturaSequencial.html") || path.endsWith("Atividades_resolvidas/estruturaDecisao.html")) {
+} //else if (path.endsWith("/Atividades_resolvidas/EstruturaSequencial.html") || path.endsWith("Atividades_resolvidas/estruturaDecisao.html") || path.endsWith("Atividades_resolvidas/estruturaRepeticao.html")) {
+  else if (listaCaminhos.some(caminho => path.endsWith(caminho))) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="./EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="./estruturaDecisao.html">Estrutura de decisão</a></li>
-        <li>Estrutura de repetição</li>
+        <li><a href="./estruturaRepeticao.html">Estrutura de repetição</a></li>
         <li>Exercícios sobre listas</li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
@@ -117,7 +119,7 @@ if (path.endsWith("/index.html")) {
     <ul>
         <li><a href="../EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="../estruturaDecisao.html">Estrutura de decisão</a></li>
-        <li>Estrutura de repetição</li>
+        <li><a href="../estruturaRepeticao.html">Estrutura de repetição</a></li>
         <li>Exercícios sobre listas</li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
