@@ -64,7 +64,36 @@ Maçã              R$ 1,80 por Kg            R$ 1,50 por Kg
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+let qntMorango = parseFloat(prompt("Quantidade em Kg de Morangos a ser comprado"));
+let qntMaca = parseFloat(prompt("Quantidade em Kg de Maçã a ser comprado"));
+let totalKg = qntMorango + qntMaca;
+let totalMorango = 0;
+let totalMaca = 0;
+let totalValor = 0;
+let saidaConsole = `${qntMorango}Kg em Morangos;\n${qntMaca}Kg em Maçãs.`;
+
+if (totalKg <= 5) {
+    totalMorango = 2.50;
+    totalMaca = 1.80;
+
+    totalValor = (totalMorango * qntMorango) + (totalMaca * qntMaca);
+    saidaConsole += `\nValor a ser pago R$${totalValor}`;
+} else if (totalKg > 5) {
+    totalMorango = 2.20;
+    totalMaca = 1.50;
+
+    totalValor = (totalMorango * qntMorango) + (totalMaca * qntMaca);
+    saidaConsole += `\nValor a ser pago R$${totalValor}`;
+}
+if (totalKg > 8 || totalValor > 25.00) {
+    totalValor -= (totalValor * 0.1);
+
+    saidaConsole += `\nVocê ganhou desconto de 10%. O novo valor a ser pago será de R$${totalValor}`;
+}
+
+console.log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -82,11 +111,38 @@ Maçã              R$ 1,80 por Kg            R$ 1,50 por Kg
 
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        let qntMorango = parseFloat(prompt("Quantidade em Kg de Morangos a ser comprado"));
+        let qntMaca = parseFloat(prompt("Quantidade em Kg de Maçã a ser comprado"));
+        let totalKg = qntMorango + qntMaca;
+        let totalMorango = 0;
+        let totalMaca = 0;
+        let totalValor = 0;
+        let saidaConsole = `${qntMorango}Kg em Morangos;\n${qntMaca}Kg em Maçãs.`;
+
+        if (qntMorango <= 5) {
+            totalMorango = 2.50 * qntMorango;
+        } else {
+            totalMorango = 2.20 * qntMorango;
+        }
+        if (qntMaca <= 5) {
+            totalMaca = 1.80 * qntMaca;
+        } else {
+            totalMaca = 1.50 * qntMaca;
+        }
+        totalValor = totalMorango + totalMaca;
+        saidaConsole += `\nValor a ser pago por:\nMorango = R$${totalMorango.toFixed(2)}.\nMaçã = R$${totalMaca.toFixed(2)}.\nValor Total = R$${totalValor.toFixed(2)}.`;
+
+        if (totalKg > 8 || totalValor > 25.00) {
+            totalValor -= (totalValor * 0.1);
+
+            saidaConsole += `\nVocê ganhou desconto de 10%. O novo valor a ser pago será de R$${totalValor.toFixed(2)}`;
+        }
+        
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
     </script>
 </body>
 </html>

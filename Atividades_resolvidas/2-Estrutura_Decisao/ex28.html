@@ -65,7 +65,71 @@ Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
             </div>
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
-<pre></pre>
+<pre>
+alert("Por favor, responda as perguntas a seguir com \"s\" para \"Sim\" ou \"n\" para \"Não\".");
+
+let tipoCarne = prompt("Digite o número correspondente a carne que você deseja comprar:\n1 - Filé Duplo;\n2 - Alcatra;\n3 - Picanha.");
+
+let qtdFile = 0;
+let qtdAlcatra = 0;
+let qtdPicanha = 0;
+
+let totalFile = 0;
+let totalAlcatra = 0;
+let totalPicanha = 0;
+let totalValor = 0;
+let saidaConsole = `\nValor a ser pago por:`;
+
+if (tipoCarne === "1") {
+    qtdFile = parseFloat(prompt("Digite a quantidade em Kg de filé Duplo a ser comprado."));
+
+    if (qtdFile <= 5) {
+        totalFile = 4.90 * qtdFile;
+    } else {
+        totalFile = 5.80 * qtdFile;
+    }
+    saidaConsole += `\nFile = R$${totalFile.toFixed(2)}.`;
+
+}
+if (tipoCarne === "2") {
+    qtdAlcatra = parseFloat(prompt("Digite a quantidade em Kg de Alcatra a ser comprado."));
+
+    if (qtdAlcatra <= 5) {
+        totalAlcatra = 5.90 * qtdAlcatra;
+    } else {
+        totalAlcatra = 6.80 * qtdAlcatra;
+    }
+    saidaConsole += `\nAlcatra = R$${totalAlcatra.toFixed(2)}.`;
+}
+if (tipoCarne === "3") {
+    qtdPicanha = parseFloat(prompt("Digite a quantidade em Kg de Picanha a ser comprado."));
+
+    if (qtdPicanha <= 5) {
+        totalPicanha = 6.90 * qtdPicanha;
+    } else {
+        totalPicanha = 7.80 * qtdPicanha;
+    }
+    saidaConsole += `\nPicanha = R$${totalPicanha.toFixed(2)}.\nValor Total = R$${totalValor.toFixed(2)}.`;
+}
+
+// saidaConsole += `\nValor a ser pago por:\nFile = R$${totalFile.toFixed(2)}.\nAlcatra = R$${totalAlcatra.toFixed(2)}.\nPicanha = R$${totalPicanha.toFixed(2)}.\nValor Total = R$${totalValor.toFixed(2)}.`;
+
+totalValor = totalFile + totalAlcatra + totalPicanha;
+
+let possuiCartao = prompt("Você possui o cartão da loja?\ns - Sim;\nn - Não").toLowerCase();
+
+if (possuiCartao === "s") {
+    totalValor -= (totalValor * 0.05);
+
+    saidaConsole += `\nVocê ganhou desconto de 5%. O novo valor a ser pago será de R$${totalValor.toFixed(2)}`;
+}
+
+console.log(saidaConsole);
+function log(msg) {
+    document.getElementById("console").innerHTML += msg + "\n";
+};
+log(saidaConsole);
+</pre>
             </div>
             <div class="console_codigo">
                 <!-- saída do console referente ao código -->
@@ -73,21 +137,144 @@ Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
             </div>
         </section>
     </main>
-
+    
     <footer>
         <a href="" id="exercicioAnterior"><button>&#5176; Exercício Anterior</button></a>
         <span style="display:none;"><a href="" id="proximoExercicio"><button>Próximo Exercício &#5171;</button></a></span><span style="color:gainsboro">Este é o último exercício dessa etapa.</span>
     </footer>
-
+    
     <script src="../../script/script.js"></script>
-
+    
     <script>
         // Escreva o código do exercício aqui.
-        // function log(msg) {
-        //     document.getElementById("console").innerHTML += msg + "\n";
-        // }
-        // console.log("Hello, world!")
-        // log("Hello, world!")
+        alert("Por favor, responda as perguntas a seguir com \"s\" para \"Sim\" ou \"n\" para \"Não\".");
+        
+        let tipoCarne = prompt("Digite o número correspondente a carne que você deseja comprar:\n1 - Filé Duplo;\n2 - Alcatra;\n3 - Picanha.");
+        
+        let qtdFile = 0;
+        let qtdAlcatra = 0;
+        let qtdPicanha = 0;
+        
+        let totalFile = 0;
+        let totalAlcatra = 0;
+        let totalPicanha = 0;
+        let totalValor = 0;
+        let saidaConsole = `=========== Nota Fiscal ===========\n\nValor a ser pago por:`;
+        
+        if (tipoCarne === "1") {
+            qtdFile = parseFloat(prompt("Digite a quantidade em Kg de filé Duplo a ser comprado."));
+            
+            if (qtdFile <= 5) {
+                totalFile = 4.90 * qtdFile;
+            } else {
+                totalFile = 5.80 * qtdFile;
+            }
+            saidaConsole += `\nCarne comprada: File.\nQuantidade comprada: ${qtdFile}Kg.\nValor total: R$${totalFile.toFixed(2)}.`;
+            
+        }
+        if (tipoCarne === "2") {
+            qtdAlcatra = parseFloat(prompt("Digite a quantidade em Kg de Alcatra a ser comprado."));
+            
+            if (qtdAlcatra <= 5) {
+                totalAlcatra = 5.90 * qtdAlcatra;
+            } else {
+                totalAlcatra = 6.80 * qtdAlcatra;
+            }
+            saidaConsole += `\nCarne comprada: Alcatra.\nQuantidade comprada: ${qtdAlcatra}Kg.\nValor total: R$${totalAlcatra.toFixed(2)}.`;
+        }
+        if (tipoCarne === "3") {
+            qtdPicanha = parseFloat(prompt("Digite a quantidade em Kg de Picanha a ser comprado."));
+            
+            if (qtdPicanha <= 5) {
+                totalPicanha = 6.90 * qtdPicanha;
+            } else {
+                totalPicanha = 7.80 * qtdPicanha;
+            }
+            saidaConsole += `\nCarne comprada: Picanha.\nQuantidade comprada: ${qtdPicanha}Kg.\nValor total: R$${totalPicanha.toFixed(2)}.`;
+        }
+        
+        let tipoPagamento = prompt("Qual será o tipo de pagamento?");
+        totalValor = totalFile + totalAlcatra + totalPicanha;
+        
+        let possuiCartao = prompt("Você possui o cartão da loja?\ns - Sim;\nn - Não").toLowerCase();
+        
+        if (possuiCartao === "s") {
+            totalValor -= (totalValor * 0.05);
+            
+            saidaConsole += `\nVocê ganhou desconto de 5%. Valor total com desconto aplicado: R$${totalValor.toFixed(2)}`;
+        }
+        
+        saidaConsole += `\nTipo de pagamento: ${tipoPagamento}.\nValor total a ser pago: R$${totalValor.toFixed(2)}`;
+        
+        console.log(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML += msg + "\n";
+        };
+        log(saidaConsole);
+        
+        // A BAIXO TEM UMA VERSÃO DESCARTADA DO CÓDIGO. Essa versão era capáz de fazer a conta com todos os tipos de carne, com apenas dois tipos de carne ou com apenas um tipo de carne. Foi descartado pois eu percebi só depois de finalizar que não era isso que o enunciado pedia. "Oopsie Daisy".
+        
+        /*
+        *alert("Por favor, responda as perguntas a seguir com \"s\" para \"Sim\" ou \"n\" para \"Não\".");
+        *let isFile = prompt("Deseja comprar file duplo?\ns - Sim;\nn - Não.").toLowerCase();
+        *let isAlcatra = prompt("Deseja comprar alcatra?\ns - Sim;\nn - Não.").toLowerCase();
+        *let isPicanha = prompt("Deseja comprar picanha?\ns - Sim;\nn - Não.").toLowerCase();
+        *
+        *let qtdFile = 0;
+        *let qtdAlcatra = 0;
+        *let qtdPicanha = 0;
+*
+        *let totalFile = 0;
+        *let totalAlcatra = 0;
+        *let totalPicanha = 0;
+        *let totalValor = 0;
+        *let saidaConsole = ``;
+*
+        *if (isFile === "s") {
+        *    qtdFile = parseFloat(prompt("Digite a quantidade em Kg de filé Duplo a ser comprado."));
+        *
+        *    if (qtdFile <= 5) {
+        *        totalFile = 4.90 * qtdFile;
+        *    } else {
+        *        totalFile = 5.80 * qtdFile;
+        *    }
+        *}
+        *if (isAlcatra === "s") {
+        *    qtdAlcatra = parseFloat(prompt("Digite a quantidade em Kg de Alcatra a ser comprado."));
+        *
+        *    if (qtdAlcatra <= 5) {
+        *        totalAlcatra = 5.90 * qtdAlcatra;
+        *    } else {
+        *        totalAlcatra = 6.80 * qtdAlcatra;
+        *    }
+        *}
+        *if (isPicanha === "s") {
+        *    qtdPicanha = parseFloat(prompt("Digite a quantidade em Kg de Picanha a ser comprado."));
+        *
+        *    if (qtdPicanha <= 5) {
+        *        totalPicanha = 6.90 * qtdPicanha;
+        *    } else {
+        *        totalPicanha = 7.80 * qtdPicanha;
+        *    }
+        *}
+        *
+        *totalValor = totalFile + totalAlcatra + totalPicanha;
+        *saidaConsole += `\nValor a ser pago por:\nFile = R$${totalFile.toFixed(2)}.\nAlcatra = R$${totalAlcatra.toFixed(2)}.\nPicanha = R$${totalPicanha.toFixed(2)}.\nValor Total = R$${totalValor.toFixed(2)}.`;
+*
+        *let possuiCartao = prompt("Você possui o cartão da loja?\ns - Sim;\nn - Não").toLowerCase();
+        *
+        *if (possuiCartao === "s") {
+        *    totalValor -= (totalValor * 0.05);
+*
+        *    saidaConsole += `\nVocê ganhou desconto de 5%. O novo valor a ser pago será de R$${totalValor.toFixed(2)}`;
+        *}
+        *
+        *console.log(saidaConsole);
+        *function log(msg) {
+        *    document.getElementById("console").innerHTML += msg + "\n";
+        *};
+        *log(saidaConsole);
+*/
     </script>
 </body>
 </html>
