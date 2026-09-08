@@ -83,9 +83,10 @@ document.querySelector(".theme").addEventListener('click', () => {
 });
 
 const path = window.location.pathname;
-let listaCaminhos = ["SiteDeExerciciosDoPython-JS/","/Atividades_resolvidas/EstruturaSequencial.html","Atividades_resolvidas/estruturaDecisao.html","Atividades_resolvidas/estruturaRepeticao.html"]
+let listaCaminhos = ["/Atividades_resolvidas/EstruturaSequencial.html","Atividades_resolvidas/estruturaDecisao.html","Atividades_resolvidas/estruturaRepeticao.html"]
 console.log(path)
-if (path.endsWith("/index.html")) {
+
+if (path.endsWith("/index.html") || path.endsWith("/SiteDeExerciciosDoPython-JS/")) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
