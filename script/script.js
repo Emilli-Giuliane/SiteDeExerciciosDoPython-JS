@@ -92,7 +92,7 @@ if (path.endsWith("/index.html") || path.endsWith("/SiteDeExerciciosDoPython-JS/
         <li><a href="Atividades_resolvidas/EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="Atividades_resolvidas/estruturaDecisao.html">Estrutura de decisão</a></li>
         <li><a href="Atividades_resolvidas/estruturaRepeticao.html">Estrutura de repetição</a></li>
-        <li>Exercícios sobre listas</li>
+        <li><a href="Atividades_resolvidas/estruturaLista.html">Exercícios sobre listas</a></li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
         <li>Exercícios sobre arquivos</li>
@@ -100,14 +100,13 @@ if (path.endsWith("/index.html") || path.endsWith("/SiteDeExerciciosDoPython-JS/
         <li>Lista de projetos</li>
         <li>Lista de dados</li>
     </ul>`
-} //else if (path.endsWith("/Atividades_resolvidas/EstruturaSequencial.html") || path.endsWith("Atividades_resolvidas/estruturaDecisao.html") || path.endsWith("Atividades_resolvidas/estruturaRepeticao.html")) {
-  else if (listaCaminhos.some(caminho => path.endsWith(caminho))) {
+} else if (listaCaminhos.some(caminho => path.endsWith(caminho))) {
     document.querySelector("aside").innerHTML = `
     <ul>
         <li><a href="./EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="./estruturaDecisao.html">Estrutura de decisão</a></li>
         <li><a href="./estruturaRepeticao.html">Estrutura de repetição</a></li>
-        <li>Exercícios sobre listas</li>
+        <li><a href="./estruturaLista.html">Exercícios sobre listas</a></li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
         <li>Exercícios sobre arquivos</li>
@@ -121,7 +120,7 @@ if (path.endsWith("/index.html") || path.endsWith("/SiteDeExerciciosDoPython-JS/
         <li><a href="../EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="../estruturaDecisao.html">Estrutura de decisão</a></li>
         <li><a href="../estruturaRepeticao.html">Estrutura de repetição</a></li>
-        <li>Exercícios sobre listas</li>
+        <li><a href="./estruturaLista.html">Exercícios sobre listas</a></li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
         <li>Exercícios sobre arquivos</li>
