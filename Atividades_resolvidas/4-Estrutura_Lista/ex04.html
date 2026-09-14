@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 04</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima as consoantes.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,22 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let chara = [];
+let consoantes = "";
+let qntdConsoantes = 0;
+let saidaConsole = "Consoantes: ";
+let aux = ""
+for (let i = 0; i < 10; i++) {
+    chara[i] = prompt("Digite um número");
+    
+    if (!["a","e","i","o","u"].includes(chara[i])) {
+        qntdConsoantes++;
+        aux = chara[i] + "; ";
+        saidaConsole += aux;
+    }
+}
 
+saidaConsole += "\nQuantidade de Consoantes: " + qntdConsoantes;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +97,22 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let chara = [];
+            let consoantes = "";
+            let qntdConsoantes = 0;
+            let saidaConsole = "Consoantes: ";
+            let aux = ""
+            for (let i = 0; i < 10; i++) {
+                chara[i] = prompt("Digite um número");
+                
+                if (!["a","e","i","o","u"].includes(chara[i])) {
+                    qntdConsoantes++;
+                    aux = chara[i] + "; ";
+                    saidaConsole += aux;
+                }
+            }
+
+            saidaConsole += "\nQuantidade de Consoantes: " + qntdConsoantes;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

@@ -70,7 +70,42 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+alert("ALERTA!\n\nNão use seus dados reais.")
 
+let nome = prompt("Digite seu nome")
+// TODO: Nome: maior que 3 caracteres;
+while (nome.length < 3) {
+    alert("O campo nome deve conter mais que 3 caractéries. Tente novamente.\n\n");
+    nome = prompt("Digite seu nome");
+}
+let idade = parseInt(prompt("Digite sua idade"));
+// TODO: Idade: entre 0 e 150;
+while (idade < 0 || idade > 150) {
+    alert("O campo idade deve conter valor maior que 0 e menor que 150. Por favor, tente novamente.\n\n")
+    idade = parseInt(prompt("Digite sua idade"));
+}
+let salario = parseFloat(prompt("Digite seu salário"))
+// TODO: Salário: maior que zero;
+while (salario <= 0) {
+    alert("O campo salário deve ser maior que 0. Tente novamente.\n\n");
+    salario = parseFloat(prompt("Digite seu salário"));
+}
+let estadoCivil = prompt("Digite seu estado civíl.\n\ns - Solteiro;\nc - Casado;\nv - Viúvo;\nd - Divorciado.").toLowerCase();
+while (!["s", "c", "v", "d"].includes(estadoCivil)) {
+    alert("O campo Estado Civíl não pode conter outra informação a não ser uma das opções dadas. Por favor, tente novamente.\n\n");
+    estadoCivil = prompt("Digite seu estado civíl.\n\ns - Solteiro;\nc - Casado;\nv - Viúvo;\nd - Divorciado.");
+}
+if (estadoCivil === "s") {
+    estadoCivil = "Solteiro";
+} else if (estadoCivil === "c") {
+    estadoCivil = "Casado";
+} else if (estadoCivil === "v") {
+    estadoCivil = "Viúvo";
+} else if (estadoCivil === "d") {
+    estadoCivil = "Divorciádo";
+}
+
+let saidaConsole = `Segundo as informações colocadas:\nSeu nome: ${nome}.\nSua idade: ${idade}.\nSeu salário: R$${salario.toFixed(2)}.\nSeu estado civíl: ${estadoCivil}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -90,6 +125,42 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            alert("ALERTA!\n\nNão use seus dados reais.")
+
+            let nome = prompt("Digite seu nome")
+            // TODO: Nome: maior que 3 caracteres;
+            while (nome.length < 3) {
+                alert("O campo nome deve conter mais que 3 caractéries. Tente novamente.\n\n");
+                nome = prompt("Digite seu nome");
+            }
+            let idade = parseInt(prompt("Digite sua idade"));
+            // TODO: Idade: entre 0 e 150;
+            while (idade < 0 || idade > 150) {
+                alert("O campo idade deve conter valor maior que 0 e menor que 150. Por favor, tente novamente.\n\n")
+                idade = parseInt(prompt("Digite sua idade"));
+            }
+            let salario = parseFloat(prompt("Digite seu salário"))
+            // TODO: Salário: maior que zero;
+            while (salario <= 0) {
+                alert("O campo salário deve ser maior que 0. Tente novamente.\n\n");
+                salario = parseFloat(prompt("Digite seu salário"));
+            }
+            let estadoCivil = prompt("Digite seu estado civíl.\n\ns - Solteiro;\nc - Casado;\nv - Viúvo;\nd - Divorciado.").toLowerCase();
+            while (!["s", "c", "v", "d"].includes(estadoCivil)) {
+                alert("O campo Estado Civíl não pode conter outra informação a não ser uma das opções dadas. Por favor, tente novamente.\n\n");
+                estadoCivil = prompt("Digite seu estado civíl.\n\ns - Solteiro;\nc - Casado;\nv - Viúvo;\nd - Divorciado.");
+            }
+            if (estadoCivil === "s") {
+                estadoCivil = "Solteiro";
+            } else if (estadoCivil === "c") {
+                estadoCivil = "Casado";
+            } else if (estadoCivil === "v") {
+                estadoCivil = "Viúvo";
+            } else if (estadoCivil === "d") {
+                estadoCivil = "Divorciádo";
+            }
+
+            let saidaConsole = `Segundo as informações colocadas:\nSeu nome: ${nome}.\nSua idade: ${idade}.\nSeu salário: R$${salario.toFixed(2)}.\nSeu estado civíl: ${estadoCivil}`;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

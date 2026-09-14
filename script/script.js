@@ -120,7 +120,7 @@ if (path.endsWith("/index.html") || path.endsWith("/SiteDeExerciciosDoPython-JS/
         <li><a href="../EstruturaSequencial.html">Estrutura sequencial</a></li>
         <li><a href="../estruturaDecisao.html">Estrutura de decisão</a></li>
         <li><a href="../estruturaRepeticao.html">Estrutura de repetição</a></li>
-        <li><a href="./estruturaLista.html">Exercícios sobre listas</a></li>
+        <li><a href="../estruturaLista.html">Exercícios sobre listas</a></li>
         <li>Exercícios sobre funções</li>
         <li>Exercícios sobre strings</li>
         <li>Exercícios sobre arquivos</li>

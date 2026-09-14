@@ -62,7 +62,14 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let num = [];
+num[0] = parseInt(prompt("Digite o primeiro número inteiro."));
+num[1] = parseInt(prompt("Digite o segundo número inteiro."));
+num[2] = parseInt(prompt("Digite o terceiro número inteiro."));
+num[3] = parseInt(prompt("Digite o quarto número inteiro."));
+num[4] = parseInt(prompt("Digite o quinto número inteiro."));
 
+let saidaConsole = "Veja os números que você escolheu: " + num;
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,6 +89,14 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let num = [];
+            num[0] = parseInt(prompt("Digite o primeiro número inteiro."));
+            num[1] = parseInt(prompt("Digite o segundo número inteiro."));
+            num[2] = parseInt(prompt("Digite o terceiro número inteiro."));
+            num[3] = parseInt(prompt("Digite o quarto número inteiro."));
+            num[4] = parseInt(prompt("Digite o quinto número inteiro."));
+
+            let saidaConsole = "Veja os números que você escolheu: " + num;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

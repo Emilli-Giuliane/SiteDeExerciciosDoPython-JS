@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 04</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Supondo que a população de um país A seja da ordem de <span class="codeText">80_000</span> habitantes com uma taxa anual de crescimento de 3% e que a população de B seja <span class="codeText">200_000</span> habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -81,7 +82,23 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let pA = 80.000;
+            let percentA = 0;
+            let pB = 200.000;
+            let percentB = 0;
+            let contAnos = 0;
+            
+            while(pA < pB) {
+                percentA = pA * 0.03;
+                pA = percentA + pA;
 
+                percentB = pB * 0.015;
+                pB = percentB + pB;
+
+                contAnos++
+            }
+
+            let saidaConsole = `Demoraram ${contAnos} para a população de A ser maior que a população de B.\nPopulação de A: ${pA}.\nPopulação de B: ${pB}`
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };

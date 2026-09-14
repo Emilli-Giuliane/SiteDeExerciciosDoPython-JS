@@ -62,7 +62,20 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+alert("ALERTA!\n\nForneça apenas informações inventadas. Ex.: senha: 1234, nome: 1234");
 
+// TODO: Faça um programa que leia um nome de usuário e a sua senha [...]
+let usuario = prompt("Digite seu nome de usuário");
+let senha = prompt("Digite sua senha");
+
+// TODO: [...] e não aceite a senha igual ao nome do usuário [...]
+while(usuario === senha) {
+    //TODO: [...] mostrando uma mensagem de erro e voltando a pedir as informações
+    usuario = prompt("Senha e usuário não podem ser a mesma sequência de caractéries. Por favor tente novamente.\nDigite seu nome de usuário");
+    senha = prompt("Digite sua senha")
+}
+
+let saidaConsole = `Seu usuário: ${usuario}.\nSua senha: ${senha}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,7 +95,20 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            alert("ALERTA!\n\nForneça apenas informações inventadas. Ex.: senha: 1234, nome: 1234");
 
+            // TODO: Faça um programa que leia um nome de usuário e a sua senha [...]
+            let usuario = prompt("Digite seu nome de usuário");
+            let senha = prompt("Digite sua senha");
+            
+            // TODO: [...] e não aceite a senha igual ao nome do usuário [...]
+            while(usuario === senha) {
+                //TODO: [...] mostrando uma mensagem de erro e voltando a pedir as informações
+                usuario = prompt("Senha e usuário não podem ser a mesma sequência de caractéries. Por favor tente novamente.\nDigite seu nome de usuário");
+                senha = prompt("Digite sua senha")
+            }
+
+            let saidaConsole = `Seu usuário: ${usuario}.\nSua senha: ${senha}`;
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };

@@ -62,7 +62,14 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let num = [];
 
+for (let i = 0; num.length < 10; i++) {
+    num[i] = parseFloat(prompt("Digite um número"))
+}
+
+num.reverse();
+let saidaConsole = num;
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,7 +89,21 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let num = [];
 
+            for (let i = 0; num.length < 10; i++) {
+                num[i] = parseFloat(prompt("Digite um número"))
+            }
+            
+            num.reverse();
+            let saidaConsole = num;
+
+            /* Também dá pra fazer usando for! Veja a baixo:
+            *
+            * num.reverse();
+            * for (i = 10; i >= 0; i--) { console.log(num[i])}
+            */
+           
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };

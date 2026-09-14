@@ -62,7 +62,14 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
-
+let nota = [];
+let soma = 0;
+for (let i = 0; nota.length < 4; i++) {
+    nota[i] = parseFloat(prompt("Digite uma nota"))
+    soma += nota[i];
+}
+let resultado = soma / 4;
+let saidaConsole = "Ao tirar a médida das notas " + nota + " obtemos o resultado" + resultado;
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,6 +89,14 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let nota = [];
+            let soma = 0;
+            for (let i = 0; nota.length < 4; i++) {
+                nota[i] = parseFloat(prompt("Digite uma nota"))
+                soma += nota[i];
+            }
+            let resultado = soma / 4;
+            let saidaConsole = "Ao tirar a médida das notas " + nota + " obtemos o resultado" + resultado;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

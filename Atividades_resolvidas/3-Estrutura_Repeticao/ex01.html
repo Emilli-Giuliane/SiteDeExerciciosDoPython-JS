@@ -62,7 +62,14 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let num = prompt("Digite um número inteiro entre 0 e 10.");
 
+while (num > 10 || num < 0) {
+    alert("Número inválido. Tente novamente.")
+    num = prompt("Digite um número inteiro entre 0 e 10.")
+}
+
+let saidaConsole = "O valor do número digitado (" + num + ") é um valor válido."
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,7 +89,14 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let num = prompt("Digite um número inteiro entre 0 e 10.");
 
+            while (num > 10 || num < 0) {
+                alert("Número inválido. Tente novamente.")
+                num = prompt("Digite um número inteiro entre 0 e 10.")
+            }
+
+            let saidaConsole = "O valor do número digitado (" + num + ") é um valor válido."
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };
