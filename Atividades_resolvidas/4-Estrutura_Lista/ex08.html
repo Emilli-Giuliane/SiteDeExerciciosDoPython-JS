@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -62,7 +62,23 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let idade = [];
+let altura = [];
 
+for (let i = 0; i < 5; i++) {
+    idade.push(parseInt(prompt(`Digite a idade da ${i+1}º pessoa.`)));
+    altura.push(parseFloat(prompt(`Digite a altura da ${i+1}º pessoa.`)));                
+}
+let saidaConsole = `===== Mostrando números digitados =====\n\nIdades: ${idade}.\nAlturas: ${altura}.\n\n===== Mostrando na ordem inversa de como são lidos =====\n\n`;
+idade.sort((a,b) => a - b);
+altura.sort((a,b) => a - b);
+
+saidaConsole += `Idades: ${idade}.\nAlturas: ${altura}`;
+
+function log(msg) {
+    document.getElementById("console").innerHTML = msg;
+};
+log(saidaConsole);
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,12 +98,25 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que peça a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida.
+            let idade = [];
+            let altura = [];
+
+            for (let i = 0; i < 5; i++) {
+                idade.push(parseInt(prompt(`Digite a idade da ${i+1}º pessoa.`)));
+                altura.push(parseFloat(prompt(`Digite a altura da ${i+1}º pessoa.`)));                
+            }
+            let saidaConsole = `===== Mostrando números digitados =====\n\nIdades: ${idade}.\nAlturas: ${altura}.\n\n===== Mostrando na ordem inversa de como são lidos =====\n\n`;
+            idade.sort((a,b) => a - b);
+            altura.sort((a,b) => a - b);
+
+            saidaConsole += `Idades: ${idade}.\nAlturas: ${altura}`;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };
             log(saidaConsole);
-        })        
+        })
     </script>
 </body>
 </html>

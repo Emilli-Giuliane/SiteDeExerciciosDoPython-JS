@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -62,7 +62,30 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let alunos = {};
+let contAlunosNota7 = 0;
 
+for (let i = 0; i < 10; i++) {
+    alunos[i] = {}
+
+    alunos[i].nome = prompt("Informe o nome do aluno " + (i + 1) + ".")
+    
+    alunos[i].notas = [];
+
+    alunos[i].media = 0;
+    
+    for (let j = 0; j < 4; j++){
+        alunos[i].notas.push(parseFloat(prompt(`Digite a ${j+1}º nota do aluno ${alunos[i].nome}`)))
+        alunos[i].media += alunos[i].notas[j]
+    }
+    alunos[i].media /= 4;
+
+    if (alunos[i].media >= 7.0) {
+        contAlunosNota7++;
+    }
+}
+let saidaConsole = `${contAlunosNota7} alunos estão com a média maior que 7.0.`;
+console.log(alunos)
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,6 +105,31 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que peça as quatro notas de 10 alunos, calcule e armazene num vetor a média de cada aluno, imprima o número de alunos com média maior ou igual a 7.0.
+            let alunos = {};
+            let contAlunosNota7 = 0;
+
+            for (let i = 0; i < 10; i++) {
+                alunos[i] = {}
+
+                alunos[i].nome = prompt("Informe o nome do aluno " + (i + 1) + ".")
+                
+                alunos[i].notas = [];
+
+                alunos[i].media = 0;
+                
+                for (let j = 0; j < 4; j++){
+                    alunos[i].notas.push(parseFloat(prompt(`Digite a ${j+1}º nota do aluno ${alunos[i].nome}`)))
+                    alunos[i].media += alunos[i].notas[j]
+                }
+                alunos[i].media /= 4;
+
+                if (alunos[i].media >= 7.0) {
+                    contAlunosNota7++;
+                }
+            }
+            let saidaConsole = `${contAlunosNota7} alunos estão com a média maior que 7.0.`;
+            console.log(alunos)
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

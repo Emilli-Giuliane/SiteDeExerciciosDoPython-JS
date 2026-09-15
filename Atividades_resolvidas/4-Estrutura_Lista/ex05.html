@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -62,7 +62,21 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let numeros = [];
+let pares = [];
+let impares = [];
 
+for (let i = 0; i < 20; i++) {
+    numeros[i] = parseInt(prompt(`Digite o ${i+1}º número`));
+    
+    if (numeros[i] % 2 === 0) {
+        pares.push(numeros[i]);
+    } else {
+        impares.push(numeros[i]);
+    }
+}
+
+let saidaConsole = `Números digitados: ${numeros}.\nNúmeros pares: ${pares}.\nNúmeros impares: ${impares}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,6 +96,23 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // TODO: Faça um programa que leia 20 números inteiros e armazene-os num vetor. Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Imprima os três vetores.
+            let numeros = [];
+            let pares = [];
+            let impares = [];
+
+            for (let i = 0; i < 20; i++) {
+                numeros[i] = parseInt(prompt(`Digite o ${i+1}º número`));
+                
+                if (numeros[i] % 2 === 0) {
+                    pares.push(numeros[i]);
+                } else {
+                    impares.push(numeros[i]);
+                }
+            }
+
+            let saidaConsole = `Números digitados: ${numeros}.\nNúmeros pares: ${pares}.\nNúmeros impares: ${impares}`;
+            
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
