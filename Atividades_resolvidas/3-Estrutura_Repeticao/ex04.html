@@ -62,7 +62,27 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let pA = 80_000;
+let percentA = 0;
+let pB = 200_000;
+let percentB = 0;
+let contAnos = 0;
 
+while(pA < pB) {
+    percentA = pA * 0.03;
+    pA = percentA + pA;
+
+    percentB = pB * 0.015;
+    pB = percentB + pB;
+
+    contAnos++
+}
+
+let saidaConsole = `Demoraram ${contAnos} para a população de A ser maior que a população de B.\nPopulação de A: ${pA}.\nPopulação de B: ${pB}`
+function log(msg) {
+    document.getElementById("console").innerHTML = msg;
+};
+log(saidaConsole);
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,9 +102,9 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
-            let pA = 80.000;
+            let pA = 80_000;
             let percentA = 0;
-            let pB = 200.000;
+            let pB = 200_000;
             let percentB = 0;
             let contAnos = 0;
             
@@ -103,7 +123,7 @@
                 document.getElementById("console").innerHTML = msg;
             };
             log(saidaConsole);
-        })        
+        })
     </script>
 </body>
 </html>

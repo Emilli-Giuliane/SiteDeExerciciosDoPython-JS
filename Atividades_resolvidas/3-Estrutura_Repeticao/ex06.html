@@ -62,7 +62,22 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let numeros = []
+let saidaConsole = "";
 
+for (let i = 0; i <= 20; i++) {
+    saidaConsole += i + "\n";
+
+    // era pra sair desse jeito automaticamente (igual a baixo), mas não consegui fazer isso dentro do saidaConsole sem usar quebra de linhas.
+    console.log(i)
+    numeros[i] = i;
+}
+saidaConsole += "\n\n" + numeros;
+
+function log(msg) {
+    document.getElementById("console").innerHTML = msg;
+};
+log(saidaConsole);
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,6 +97,17 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let numeros = []
+            let saidaConsole = "";
+
+            for (let i = 0; i <= 20; i++) {
+                saidaConsole += i + "\n";
+
+                // era pra sair desse jeito automaticamente (igual a baixo), mas não consegui fazer isso dentro do saidaConsole sem usar quebra de linhas.
+                console.log(i)
+                numeros[i] = i;
+            }
+            saidaConsole += "\n\n" + numeros;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

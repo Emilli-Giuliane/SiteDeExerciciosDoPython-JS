@@ -62,7 +62,23 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let numeros = []
+let soma = 0;
 
+for (let i = 0; i < 5; i++) {
+    numeros[i] = parseInt(prompt(`Digite o ${i+1}° número`))
+    soma += numeros[i];
+}
+
+let media = soma / 5;
+
+let saidaConsole = `A soma dos numeros[${numeros}] é ${soma}, e a média desses numeros é ${media}`;
+
+
+function log(msg) {
+    document.getElementById("console").innerHTML = msg;
+};
+log(saidaConsole);
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,6 +98,18 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let numeros = []
+            let soma = 0;
+
+            for (let i = 0; i < 5; i++) {
+                numeros[i] = parseInt(prompt(`Digite o ${i+1}° número`))
+                soma += numeros[i];
+            }
+
+            let media = soma / 5;
+            
+            let saidaConsole = `A soma dos numeros[${numeros}] é ${soma}, e a média desses numeros é ${media}`;
+
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

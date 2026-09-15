@@ -62,7 +62,69 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+document.getElementById("runCode").addEventListener('click', () => {
+    // Escreva o código dentro deste evento
+    let doAgain = "";
+    do { 
+        let pA = parseFloat(prompt("Informe o tamanho da população A"));
+        while (Number.isNaN(pA) || pA <= 0) {
+            pA = parseFloat(prompt("[ERROR] Caractere inválido.\n\nInforme novamente o tamanho da população A usando apenas números. O valor deve ser maior que zero."));
+        }
+        let percentCrescA = prompt("Informe o quanto, em porcentagem, a população A crescerá em um ano");
+        while (Number.isNaN(parseFloat(percentCrescA))) {
+            percentCrescA = prompt("[ERROR] Caractere inválido.\n\nInforme novamente o quanto, em porcentagem, a população A crescerá em um ano");
+        }
+        let percentA = 0;
 
+        let pB = parseFloat(prompt("Informe o tamanho da população B"));
+        while (Number.isNaN(pB) || pB <= pA) {
+            pB = parseFloat(prompt("[ERROR] Caractere inválido.\n\n Informe novamente o tamanho da população B usando apenas números. O valor deve ser maior que da população A."));
+        }
+        let percentCrescB = prompt("Informe o quanto, em porcentagem, a população B crescerá em um ano");
+        while (Number.isNaN(parseFloat(percentCrescB)) || parseFloat(percentCrescB) > parseFloat(percentCrescA)) {
+            percentCrescB = prompt("[ERROR] Caractere inválido.\n\nInforme novamente o quanto, em porcentagem, a população B crescerá em um ano.\nO valor deve ser menor do que a porcentagem de A");
+        }
+        let percentB = 0;
+        let contAnos = 0;
+        
+        if (percentCrescA.includes("%")) {
+            percentCrescA = percentCrescA.replace("%", "");
+        }
+        // Essas linhas resolvem o problema de dentro e fora do if
+        percentCrescA = parseFloat(percentCrescA) / 100;
+
+        if (percentCrescB.includes("%")) {
+            percentCrescB = percentCrescB.replace("%", "");
+        }
+        // Essas linhas resolvem o problema de dentro e fora do if
+        percentCrescB = parseFloat(percentCrescB) / 100;
+
+        while(pA < pB) {
+            percentA = pA * percentCrescA;
+            pA = percentA + pA;
+
+            percentB = pB * percentCrescB;
+            pB = percentB + pB;
+
+            contAnos++
+        }
+
+        let saidaConsole = `Demoraram ${contAnos} para a população de A, que cresce em ${percentCrescA * 100}% a cada ano, ser maior que a população de B, que cresce em ${percentCrescB * 100}% a cada ano.\nPopulação de A: ${pA}.\nPopulação de B: ${pB}`
+        
+        alert(saidaConsole);
+        function log(msg) {
+            document.getElementById("console").innerHTML = msg;
+        };
+        log(saidaConsole);
+
+        doAgain = prompt("Deseja recomeçar?\n\nS - Sim;\nN - Não;").toUpperCase();
+        
+        while (doAgain != "S" && doAgain != "N") {
+            doAgain = prompt("[ERROR]. Sua resposta deve conter apenas Caracteres. Por favor responda com \"S\" para \"Sim\", ou \"N\" para \"Não\".\n\nDeseja recomeçar?\n\nS - Sim;\nN - Não;").toUpperCase();
+            console.log(doAgain)
+        }
+    } while (doAgain === "S");
+})
 </pre>
             </div>
             <div class="console_codigo">
@@ -82,12 +144,67 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let doAgain = "";
+            do { 
+                let pA = parseFloat(prompt("Informe o tamanho da população A"));
+                while (Number.isNaN(pA) || pA <= 0) {
+                    pA = parseFloat(prompt("[ERROR] Caractere inválido.\n\nInforme novamente o tamanho da população A usando apenas números. O valor deve ser maior que zero."));
+                }
+                let percentCrescA = prompt("Informe o quanto, em porcentagem, a população A crescerá em um ano");
+                while (Number.isNaN(parseFloat(percentCrescA))) {
+                    percentCrescA = prompt("[ERROR] Caractere inválido.\n\nInforme novamente o quanto, em porcentagem, a população A crescerá em um ano");
+                }
+                let percentA = 0;
 
-            function log(msg) {
-                document.getElementById("console").innerHTML = msg;
-            };
-            log(saidaConsole);
-        })        
+                let pB = parseFloat(prompt("Informe o tamanho da população B"));
+                while (Number.isNaN(pB) || pB <= pA) {
+                    pB = parseFloat(prompt("[ERROR] Caractere inválido.\n\n Informe novamente o tamanho da população B usando apenas números. O valor deve ser maior que da população A."));
+                }
+                let percentCrescB = prompt("Informe o quanto, em porcentagem, a população B crescerá em um ano");
+                while (Number.isNaN(parseFloat(percentCrescB)) || parseFloat(percentCrescB) > parseFloat(percentCrescA)) {
+                    percentCrescB = prompt("[ERROR] Caractere inválido.\n\nInforme novamente o quanto, em porcentagem, a população B crescerá em um ano.\nO valor deve ser menor do que a porcentagem de A");
+                }
+                let percentB = 0;
+                let contAnos = 0;
+                
+                if (percentCrescA.includes("%")) {
+                    percentCrescA = percentCrescA.replace("%", "");
+                }
+                // Essas linhas resolvem o problema de dentro e fora do if
+                percentCrescA = parseFloat(percentCrescA) / 100;
+
+                if (percentCrescB.includes("%")) {
+                    percentCrescB = percentCrescB.replace("%", "");
+                }
+                // Essas linhas resolvem o problema de dentro e fora do if
+                percentCrescB = parseFloat(percentCrescB) / 100;
+
+                while(pA < pB) {
+                    percentA = pA * percentCrescA;
+                    pA = percentA + pA;
+
+                    percentB = pB * percentCrescB;
+                    pB = percentB + pB;
+
+                    contAnos++
+                }
+
+                let saidaConsole = `Demoraram ${contAnos} para a população de A, que cresce em ${percentCrescA * 100}% a cada ano, ser maior que a população de B, que cresce em ${percentCrescB * 100}% a cada ano.\nPopulação de A: ${pA}.\nPopulação de B: ${pB}`
+                
+                alert(saidaConsole);
+                function log(msg) {
+                    document.getElementById("console").innerHTML = msg;
+                };
+                log(saidaConsole);
+
+                doAgain = prompt("Deseja recomeçar?\n\nS - Sim;\nN - Não;").toUpperCase();
+                
+                while (doAgain != "S" && doAgain != "N") {
+                    doAgain = prompt("[ERROR]. Sua resposta deve conter apenas Caracteres. Por favor responda com \"S\" para \"Sim\", ou \"N\" para \"Não\".\n\nDeseja recomeçar?\n\nS - Sim;\nN - Não;").toUpperCase();
+                    console.log(doAgain)
+                }
+            } while (doAgain === "S");
+        })
     </script>
 </body>
 </html>
