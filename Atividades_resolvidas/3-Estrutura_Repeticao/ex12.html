@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Repetição</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,10 +42,18 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 12</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
             </p>
+            <pre class="exempleCode">
+                Tabuada de 5:
+                5 X 1 = 5
+                5 X 2 = 10
+                ...
+                5 X 10 = 50
+            </pre>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
                 <button id="C">
@@ -81,6 +89,71 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            let escolhaTab = parseInt(prompt(`Escolha qual tabuáda quer ver digitando o número:\n\nPor exemplo, digite 1 para ver a tabuada do 1. Você pode escolher um número entre 1 ao 10.`));
+            let saidaConsole = "";
+             
+            switch (escolhaTab) {
+                case 1:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;                
+                case 2:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 3:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 4:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 5:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 6:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 7:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 8:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 9:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+                case 10:
+                    saidaConsole += `Tabuada de ${escolhaTab}:\n\n`;
+                    for (let i = 0; i <= 10; i++) {
+                        saidaConsole += `${escolhaTab} x ${i} = ${i*escolhaTab}\n`;
+                    };
+                    break;
+            }
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

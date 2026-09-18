@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 09</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,14 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
-
+let saidaConsole = "";
+let impares = []
+for (let i = 0; i < 50; i++) {
+    if (i % 2 !== 0) {
+        impares.push(i)
+    }
+}
+saidaConsole += impares;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +89,15 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+            let saidaConsole = "";
+            let impares = []
+            for (let i = 0; i < 50; i++) {
+                if (i % 2 !== 0) {
+                    impares.push(i)
+                }
+            }
+            saidaConsole += impares;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

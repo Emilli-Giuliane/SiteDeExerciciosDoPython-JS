@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 12</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Foram anotadas as idades e alturas de 30 alunos. Faça um Programa que determine quantos alunos com mais de 13 anos possuem altura inferior à média de altura desses alunos.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,54 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+const alunos = [
+{ idade: 14, altura: 1.55 },
+{ idade: 12, altura: 1.48 },
+{ idade: 15, altura: 1.62 },
+{ idade: 13, altura: 1.50 },
+{ idade: 16, altura: 1.70 },
+{ idade: 11, altura: 1.42 },
+{ idade: 14, altura: 1.52 },
+{ idade: 15, altura: 1.58 },
+{ idade: 12, altura: 1.45 },
+{ idade: 17, altura: 1.75 },
+{ idade: 13, altura: 1.53 },
+{ idade: 14, altura: 1.60 },
+{ idade: 16, altura: 1.65 },
+{ idade: 12, altura: 1.40 },
+{ idade: 15, altura: 1.51 },
+{ idade: 14, altura: 1.59 },
+{ idade: 13, altura: 1.49 },
+{ idade: 16, altura: 1.68 },
+{ idade: 11, altura: 1.38 },
+{ idade: 15, altura: 1.54 },
+{ idade: 14, altura: 1.47 },
+{ idade: 12, altura: 1.46 },
+{ idade: 17, altura: 1.71 },
+{ idade: 13, altura: 1.55 },
+{ idade: 15, altura: 1.63 },
+{ idade: 14, altura: 1.50 },
+{ idade: 16, altura: 1.69 },
+{ idade: 12, altura: 1.43 },
+{ idade: 15, altura: 1.57 },
+{ idade: 14, altura: 1.56 }
+];
 
+let soma = 0;
+let media = 0;
+let saidaConsole = "";
+// Faça um Programa que determine quantos alunos com mais de 13 anos possuem altura inferior à média de altura desses alunos.
+for (let i = 0; alunos.length > i; i++) {
+    soma += alunos[i].altura;
+};
+
+media = Number((soma / 30).toFixed(2));
+
+alunos.forEach((aluno) => {
+    if (aluno.idade > 13 && aluno.altura < media) {
+        saidaConsole += `Idade: ${aluno.idade}; Altura: ${aluno.altura}\n`
+    }
+});
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +129,55 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Foram anotadas as idades e alturas de 30 alunos. 
+            const alunos = [
+            { idade: 14, altura: 1.55 },
+            { idade: 12, altura: 1.48 },
+            { idade: 15, altura: 1.62 },
+            { idade: 13, altura: 1.50 },
+            { idade: 16, altura: 1.70 },
+            { idade: 11, altura: 1.42 },
+            { idade: 14, altura: 1.52 },
+            { idade: 15, altura: 1.58 },
+            { idade: 12, altura: 1.45 },
+            { idade: 17, altura: 1.75 },
+            { idade: 13, altura: 1.53 },
+            { idade: 14, altura: 1.60 },
+            { idade: 16, altura: 1.65 },
+            { idade: 12, altura: 1.40 },
+            { idade: 15, altura: 1.51 },
+            { idade: 14, altura: 1.59 },
+            { idade: 13, altura: 1.49 },
+            { idade: 16, altura: 1.68 },
+            { idade: 11, altura: 1.38 },
+            { idade: 15, altura: 1.54 },
+            { idade: 14, altura: 1.47 },
+            { idade: 12, altura: 1.46 },
+            { idade: 17, altura: 1.71 },
+            { idade: 13, altura: 1.55 },
+            { idade: 15, altura: 1.63 },
+            { idade: 14, altura: 1.50 },
+            { idade: 16, altura: 1.69 },
+            { idade: 12, altura: 1.43 },
+            { idade: 15, altura: 1.57 },
+            { idade: 14, altura: 1.56 }
+            ];
+
+            let soma = 0;
+            let media = 0;
+            let saidaConsole = "";
+            // Faça um Programa que determine quantos alunos com mais de 13 anos possuem altura inferior à média de altura desses alunos.
+            for (let i = 0; alunos.length > i; i++) {
+                soma += alunos[i].altura;
+            };
+            
+            media = Number((soma / 30).toFixed(2));
+            
+            alunos.forEach((aluno) => {
+                if (aluno.idade > 13 && aluno.altura < media) {
+                    saidaConsole += `Idade: ${aluno.idade}; Altura: ${aluno.altura}\n`
+                }
+            });
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

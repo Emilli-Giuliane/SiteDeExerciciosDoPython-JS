@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 10</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que leia dois vetores com 10 elementos cada. Gere um terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos elementos intercalados dos dois outros 
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,28 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let a = [];
+let b = [];
+let c = [];
+let j = 0;
+let k = 0;
 
+for (let i = 0; i < 10; i++) {
+        a.push(parseInt(prompt(`Digite o ${i + 1}º valor do primeiro vetor.`)));
+        b.push(parseInt(prompt(`Digite o ${i + 1}º valor do segundo vetor.`)));
+    };
+    
+    for (let i = 0; i < 20; i++) {
+        if (i % 2 !== 0) {
+            c.push(b[j])
+            j++  
+        } else {
+            c.push(a[k])
+            k++
+        }      
+};
+
+let saidaConsole = `===== Valores de A =====\n${a}\n\n===== Valores de B =====\n${b}\n\n===== Valores de C =====\n${c}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +103,29 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que leia dois vetores com 10 elementos cada. Gere um terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos elementos intercalados dos dois outros 
+            let a = [];
+            let b = [];
+            let c = [];
+            let j = 0;
+            let k = 0;
+            
+            for (let i = 0; i < 10; i++) {
+                    a.push(parseInt(prompt(`Digite o ${i + 1}º valor do primeiro vetor.`)));
+                    b.push(parseInt(prompt(`Digite o ${i + 1}º valor do segundo vetor.`)));
+                };
+                
+                for (let i = 0; i < 20; i++) {
+                    if (i % 2 !== 0) {
+                        c.push(b[j])
+                        j++  
+                    } else {
+                        c.push(a[k])
+                        k++
+                    }      
+            };
+
+            let saidaConsole = `===== Valores de A =====\n${a}\n\n===== Valores de B =====\n${b}\n\n===== Valores de C =====\n${c}`;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,9 +42,11 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 11</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Altere o programa anterior, intercalando 3 vetores de 10 elementos cada.
+
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +63,33 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let a = [];
+let b = [];
+let c = [];
+let tudoJunto = [];
+let cont = {
+    "a": 0,
+    "b": 1,
+    "c": 2
+}
 
+for (let i = 0; i < 10; i++) {
+        a.push(parseInt(prompt(`Digite o ${i + 1}º valor do primeiro vetor.`)));
+        b.push(parseInt(prompt(`Digite o ${i + 1}º valor do segundo vetor.`)));
+        c.push(parseInt(prompt(`Digite o ${i + 1}º valor do terceiro vetor.`)))
+};
+    
+for (let i = 0; i < 10; i++) {
+    tudoJunto[cont.a] = (a[i]);
+    tudoJunto[cont.b] = (b[i]);
+    tudoJunto[cont.c] = (c[i]);
+
+    cont.a += 3;
+    cont.b += 3;
+    cont.c += 3;
+};
+
+let saidaConsole = `===== Valores de A =====\n${a}\n\n===== Valores de B =====\n${b}\n\n===== Valores de C =====\n${c}\n\n===== Todos os valores juntos =====\n${tudoJunto}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +109,34 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Altere o programa anterior, intercalando 3 vetores de 10 elementos cada.
+            let a = [];
+            let b = [];
+            let c = [];
+            let tudoJunto = [];
+            let cont = {
+                "a": 0,
+                "b": 1,
+                "c": 2
+            }
+            
+            for (let i = 0; i < 10; i++) {
+                    a.push(parseInt(prompt(`Digite o ${i + 1}º valor do primeiro vetor.`)));
+                    b.push(parseInt(prompt(`Digite o ${i + 1}º valor do segundo vetor.`)));
+                    c.push(parseInt(prompt(`Digite o ${i + 1}º valor do terceiro vetor.`)))
+            };
+                
+            for (let i = 0; i < 10; i++) {
+                tudoJunto[cont.a] = (a[i]);
+                tudoJunto[cont.b] = (b[i]);
+                tudoJunto[cont.c] = (c[i]);
+
+                cont.a += 3;
+                cont.b += 3;
+                cont.c += 3;
+            };
+
+            let saidaConsole = `===== Valores de A =====\n${a}\n\n===== Valores de B =====\n${b}\n\n===== Valores de C =====\n${c}\n\n===== Todos os valores juntos =====\n${tudoJunto}`;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

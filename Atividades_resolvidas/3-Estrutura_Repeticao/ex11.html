@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Repetição</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 11</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Altere o programa anterior para mostrar no final a soma dos números.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,26 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let n1 = parseInt(prompt("Digite um número inteiro"));
+let n2 = parseInt(prompt("Digite um outro número inteiro"));
+let result = [];
+let resultSoma = 0;
 
+if (n1 < n2) {
+    for (let i = n1; i <= n2; i++) {
+        result.push(i);
+    }
+} else if (n1 > n2) {
+    for (let i = n2; i <= n1; i++) {
+        result.push(i)
+    }
+}
+
+for (let i = 0; i < result.length; i++) {
+    resultSoma += result[i];
+}
+
+let saidaConsole = `===== Todos os números =====\n${result}\n\n===== A soma de todos os números =====\n${resultSoma}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,12 +101,34 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Altere o programa anterior para mostrar no final a soma dos números.
+            let n1 = parseInt(prompt("Digite um número inteiro"));
+            let n2 = parseInt(prompt("Digite um outro número inteiro"));
+            let result = [];
+            let resultSoma = 0;
+
+            if (n1 < n2) {
+                for (let i = n1; i <= n2; i++) {
+                    result.push(i);
+                }
+            } else if (n1 > n2) {
+                for (let i = n2; i <= n1; i++) {
+                    result.push(i)
+                }
+            }
+            
+            for (let i = 0; i < result.length; i++) {
+                resultSoma += result[i];
+            }
+
+            let saidaConsole = `===== Todos os números =====\n${result}\n\n===== A soma de todos os números =====\n${resultSoma}`;
+
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };
             log(saidaConsole);
-        })        
+        })     
     </script>
 </body>
 </html>

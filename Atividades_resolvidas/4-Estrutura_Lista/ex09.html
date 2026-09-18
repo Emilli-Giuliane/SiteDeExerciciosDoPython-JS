@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Listas</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 09</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um Programa que leia um vetor A com 10 números inteiros, calcule e mostre a soma dos quadrados dos elementos do vetor.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,17 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let A = [];
+let quadrados = 0;
+let soma = 0;
 
+for (let i = 0; i < 10; i++) {
+    A.push(parseInt(prompt(`Digite o ${i+1}º número.`)));
+    quadrados = A[i] ** 2;
+    soma += quadrados;
+};
+
+let saidaConsole = `O resultado da soma dos quadrados dos elementos do vetor A [${A}]\né:\n${soma}`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,7 +92,18 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um Programa que leia um vetor A com 10 números inteiros, calcule e mostre a soma dos quadrados dos elementos do vetor.
+            let A = [];
+            let quadrados = 0;
+            let soma = 0;
 
+            for (let i = 0; i < 10; i++) {
+                A.push(parseInt(prompt(`Digite o ${i+1}º número.`)));
+                quadrados = A[i] ** 2;
+                soma += quadrados;
+            };
+            
+            let saidaConsole = `O resultado da soma dos quadrados dos elementos do vetor A [${A}]\né:\n${soma}`;
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };

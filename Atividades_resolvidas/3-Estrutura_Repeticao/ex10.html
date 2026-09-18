@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estrutura sequencial</title>
+        <title>Estrutura de Repetição</title>
         <link rel="stylesheet" href="../../style/style.css">
         <link rel="icon" href="../../style/img/js.png" type="image/x-icon">
         <!-- Google Symbols -->
@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 10</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,20 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let n1 = parseInt(prompt("Digite um número inteiro"));
+let n2 = parseInt(prompt("Digite um outro número inteiro"));
 
+let result = [];
+if (n1 < n2) {
+    for (let i = n1; i <= n2; i++) {
+        result.push(i);
+    }
+} else if (n1 > n2) {
+    for (let i = n2; i <= n1; i++) {
+        result.push(i)
+    }
+}
+let saidaConsole = result;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,12 +95,27 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
+            let n1 = parseInt(prompt("Digite um número inteiro"));
+            let n2 = parseInt(prompt("Digite um outro número inteiro"));
+
+            let result = [];
+            if (n1 < n2) {
+                for (let i = n1; i <= n2; i++) {
+                    result.push(i);
+                }
+            } else if (n1 > n2) {
+                for (let i = n2; i <= n1; i++) {
+                    result.push(i)
+                }
+            }
+            let saidaConsole = result;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };
             log(saidaConsole);
-        })        
+        })
     </script>
 </body>
 </html>
