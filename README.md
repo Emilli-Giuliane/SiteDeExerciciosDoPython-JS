@@ -8,4 +8,4 @@ Esse site tem o design totalmente inspirado no site do Python Brasil do dunossau
 https://exercicios.dunossauro.com/
 </p>
 <h2>Clique aqui para ser direcionado para o site e veja-o funcionando!</h2>
-<p>https://emilli-giuliane.github.io/SiteDeExerciciosDoPython-JS/</p>.
+<p>https://emilli-giuliane.github.io/SiteDeExerciciosDoPython-JS/</p>
