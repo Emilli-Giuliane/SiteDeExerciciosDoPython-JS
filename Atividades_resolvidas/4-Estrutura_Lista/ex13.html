@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 13</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, ...).
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,24 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let meses = ["Janeiro" , "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+let tempsMediaMeses = [];
+let mediaAno = 0;
+let saidaConsole = "";
 
+for (let i = 0; i < 12; i++) {
+    tempsMediaMeses[i] = parseFloat(prompt(`Digite a temperatura média do mês de ${meses[i]}`));
+    mediaAno += tempsMediaMeses[i];
+};
+
+mediaAno /= 12;
+saidaConsole = `A média do ano é ${mediaAno}.\n>>>>> Meses com temperaturas a cima da média:\n`;
+
+tempsMediaMeses.forEach((mes, index) => {
+    if (mes > mediaAno) {
+        saidaConsole += `${index + 1} -- ${meses[index]}: média ${tempsMediaMeses[index]},\n`;
+    }
+});
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +99,25 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, ...).
+            let meses = ["Janeiro" , "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            let tempsMediaMeses = [];
+            let mediaAno = 0;
+            let saidaConsole = "";
+
+            for (let i = 0; i < 12; i++) {
+                tempsMediaMeses[i] = parseFloat(prompt(`Digite a temperatura média do mês de ${meses[i]}`));
+                mediaAno += tempsMediaMeses[i];
+            };
+
+            mediaAno /= 12;
+            saidaConsole = `A média do ano é ${mediaAno}.\n>>>>> Meses com temperaturas a cima da média:\n`;
+
+            tempsMediaMeses.forEach((mes, index) => {
+                if (mes > mediaAno) {
+                    saidaConsole += `${index + 1} -- ${meses[index]}: média ${tempsMediaMeses[index]},\n`;
+                }
+            });
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

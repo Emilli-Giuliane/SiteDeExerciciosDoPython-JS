@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 13</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. Não utilize a função de potência da linguagem.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,16 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let base = parseInt(prompt("Digite o valor da base"));
+let expoente = parseInt(prompt("Digite o valor do expoente"));
+let result = base;
+let i = 1;
 
+while (i < expoente) {
+    result *= base
+    i++
+}
+let saidaConsole = base + " elevado a " + expoente + " = " + result;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +91,17 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. Não utilize a função de potência da linguagem.
+            let base = parseInt(prompt("Digite o valor da base"));
+            let expoente = parseInt(prompt("Digite o valor do expoente"));
+            let result = base;
+            let i = 1;
+
+            while (i < expoente) {
+                result *= base
+                i++
+            }
+            let saidaConsole = base + " elevado a " + expoente + " = " + result;
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
