@@ -42,10 +42,10 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 14</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
-                 Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+                Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
             </p>
             <ul class="identarLista">
                 <li>"Telefonou para a vítima?"</li>
@@ -72,7 +72,35 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+alert("Responda 's' para 'sim' ou 'n' para 'não'")
+let resp = [];
+let count = 0;
+let classificacao = ["Inocente", "Suspeita", "Cúmplice", "Assassino"]
 
+// seria legal se eu tratasse os erros. Até o momento, esse código aceita "Telefonou para a vítima? Resposta = "Cavalo". Mas demanda muito tempo então não irei tentar tratar os erros agora.
+resp.push(prompt("Telefonou para a vítima?").toLowerCase());
+resp.push(prompt("Esteve no local do crime?").toLowerCase());
+resp.push(prompt("Mora perto da vítima?").toLowerCase());
+resp.push(prompt("Devia para a vítima?").toLowerCase());
+resp.push(prompt("Já trabalhou com a vítima?").toLowerCase());
+console.log(resp)
+
+for (let i = 0; i < 5; i++) {
+    if (resp[i] === "s" || resp[i] === "sim") {
+        count++
+    }
+}
+let saidaConsole = "A pessoa é ";
+
+if (count < 2){
+    saidaConsole += `${classificacao[0]}.`;    
+}else if (count === 2){
+    saidaConsole += `${classificacao[1]}.`;    
+}else if (count < 5 && count >= 3){
+    saidaConsole += `${classificacao[2]}.`;    
+}else if (count === 5){
+    saidaConsole += `${classificacao[3]}.`;    
+}
 </pre>
             </div>
             <div class="console_codigo">
@@ -92,6 +120,40 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // <li>"Telefonou para a vítima?"</li>
+            // <li>"Esteve no local do crime?"</li>
+            // <li>"Mora perto da vítima?"</li>
+            // <li>"Devia para a vítima?"</li>
+            // <li>"Já trabalhou com a vítima?"</li>
+            alert("Responda 's' para 'sim' ou 'n' para 'não'")
+            let resp = [];
+            let count = 0;
+            let classificacao = ["Inocente", "Suspeita", "Cúmplice", "Assassino"]
+
+            // seria legal se eu tratasse os erros. Até o momento, esse código aceita "Telefonou para a vítima? Resposta = "Cavalo". Mas demanda muito tempo então não irei tentar tratar os erros agora.
+            resp.push(prompt("Telefonou para a vítima?").toLowerCase());
+            resp.push(prompt("Esteve no local do crime?").toLowerCase());
+            resp.push(prompt("Mora perto da vítima?").toLowerCase());
+            resp.push(prompt("Devia para a vítima?").toLowerCase());
+            resp.push(prompt("Já trabalhou com a vítima?").toLowerCase());
+            console.log(resp)
+
+            for (let i = 0; i < 5; i++) {
+                if (resp[i] === "s" || resp[i] === "sim") {
+                    count++
+                }
+            }
+            let saidaConsole = "A pessoa é ";
+
+            if (count < 2){
+                saidaConsole += `${classificacao[0]}.`;    
+            }else if (count === 2){
+                saidaConsole += `${classificacao[1]}.`;    
+            }else if (count < 5 && count >= 3){
+                saidaConsole += `${classificacao[2]}.`;    
+            }else if (count === 5){
+                saidaConsole += `${classificacao[3]}.`;    
+            }
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

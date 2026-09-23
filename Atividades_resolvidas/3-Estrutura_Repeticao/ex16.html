@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 16</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa que gere a série até que o valor seja maior que 500.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,25 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let valor = 500;
+let result = [0,1];
+let valorAnterior = 0;
 
+do {
+    valorAnterior = result[result.length - 1] + result[result.length - 2]
+
+    if (valorAnterior < valor) {
+        result.push(valorAnterior)
+    } else {
+        break
+    }
+
+    console.log(result);
+    
+
+} while (result[result.length - 1] <= valor);
+
+let saidaConsole = `Fibonacci de ${result.length}: [${result}]`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +100,27 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa que gere a série até que o valor seja maior que 500.
+            let valor = 500;
+            let result = [0,1];
+            let valorAnterior = 0;
+
+            do {
+                valorAnterior = result[result.length - 1] + result[result.length - 2]
+
+                if (valorAnterior < valor) {
+                    result.push(valorAnterior)
+                } else {
+                    break
+                }
+
+                console.log(result);
+                
+
+            } while (result[result.length - 1] <= valor);
+
+            let saidaConsole = `Fibonacci de ${result.length}: [${result}]`;
+
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

@@ -42,9 +42,10 @@
         
         <section>
             <h1>Estrutura de repetição</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 15</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a série até o n−ésimo termo.
             </p>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
@@ -61,7 +62,24 @@
             <div class="codigo_console active">
                 <!-- Adicione o código por texto aqui -->
 <pre>
+let n_esimo = 10;
+let numAnterior = 0;
+let numAtual = 1;
+let result = [];
 
+for (let i = 0; result.length < n_esimo; i++) {
+    numAtual += numAnterior;
+    numAnterior += numAtual;
+    
+    result.push(numAtual);
+    if (result.length < n_esimo) {
+        result.push(numAnterior);
+    }
+
+    console.log(result);
+}
+
+let saidaConsole = `Fibonacci de ${n_esimo}: [${result}]`;
 </pre>
             </div>
             <div class="console_codigo">
@@ -81,6 +99,26 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a série até o n−ésimo termo.
+            let n_esimo = 10;
+            let numAnterior = 0;
+            let numAtual = 1;
+            let result = [];
+
+            for (let i = 0; result.length < n_esimo; i++) {
+                numAtual += numAnterior;
+                numAnterior += numAtual;
+                
+                result.push(numAtual);
+                if (result.length < n_esimo) {
+                    result.push(numAnterior);
+                }
+
+                console.log(result);
+            }
+
+            let saidaConsole = `Fibonacci de ${n_esimo}: [${result}]`;
+
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;

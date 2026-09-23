@@ -42,10 +42,21 @@
         
         <section>
             <h1>Estrutura sobre Listas</h1>
-            <h3>Exercício 00</h3>
+            <h3>Exercício 15</h3>
             <p>
                 <!-- cole aqui o comando da atividade -->
+                Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada de dados, faça:
             </p>
+            <ul class="identarLista">
+                <li>Mostre a quantidade de valores que foram lidos;</li>
+                <li>Exiba todos os valores na ordem em que foram informados, um ao lado do outro;</li>
+                <li>Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;</li>
+                <li>Calcule e mostre a soma dos valores;</li>
+                <li>Calcule e mostre a média dos valores;</li>
+                <li>Calcule e mostre a quantidade de valores acima da média calculada;</li>
+                <li>Calcule e mostre a quantidade de valores abaixo de sete;</li>
+                <li>Encerre o programa com uma mensagem;</li>
+            </ul>
             <!-- Botões de toggle, Código/Resposta -->
             <div class="toggle_CR">
                 <button id="C">
@@ -81,11 +92,53 @@
     <script>
         document.getElementById("runCode").addEventListener('click', () => {
             // Escreva o código dentro deste evento
+            // Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado).
+            let notas = [];
+            let i = 0;
+            let saidaConsole = "";
+
+            do {
+                notas.push(parseFloat(prompt(`Digite a ${i + 1}º nota. Para parar o programa, digite -1.`)));
+                if (notas[i] < 0) {
+                    notas.pop()
+                    break;
+                }
+            } while (notas[i++] !== (-1));
+
+            // Mostre a quantidade de valores que foram lidos;
+            saidaConsole = `Quantidade de valores lidos: ${notas.length}\n`;
+            
+            // Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
+            saidaConsole += `Valores na ordem em que foram informados, um ao lado do outro:\n${notas}\n`
+
+            // Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+            let reverso = notas.toReversed()
+            saidaConsole += `Valores na ordem inversa á que foram informados, um abaixo do outro:\n${reverso.join("\n")}\n`;
+            
+            // Calcule e mostre a soma dos valores;
+            let somaTotal = notas.reduce((acc, curr) => acc + curr , 0);
+            saidaConsole += `Soma dos valores é igual a: ${somaTotal}\n`;
+
+            // Calcule e mostre a média dos valores;
+            let media = somaTotal / notas.length;
+            saidaConsole += `Resultado da média dos valores: ${media}\n`;
+
+            // Calcule e mostre a quantidade de valores acima da média calculada;
+            let acimaMedia = notas.filter((nota) => nota > media)
+            saidaConsole += `Notas acima da média: ${acimaMedia} (quantidade de valores = ${acimaMedia.length})\n`;
+
+            // Calcule e mostre a quantidade de valores abaixo de sete;
+            let abaixoSete = notas.filter((nota) => nota < 7);
+            saidaConsole += `Notas abaixo de 7: ${abaixoSete} (quantidade de valores = ${abaixoSete.length})`;
+
+            // Encerre o programa com uma mensagem;
+            saidaConsole += "\nFinalizando o programa . . . ";
 
             function log(msg) {
                 document.getElementById("console").innerHTML = msg;
             };
             log(saidaConsole);
+
         })        
     </script>
 </body>
